@@ -158,6 +158,7 @@ h3 {
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
+  
 }
 
 .action-button {
@@ -166,6 +167,7 @@ h3 {
   color: #fff;
   border-radius: 0.5rem;
   text-decoration: none;
+  text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
   border: 2px solid  #0B5844;
@@ -234,7 +236,7 @@ h3 {
   left: 50%;
   transform: translate(-50%);
   width: 90%;
-  /* background-color: rgba(0, 0, 0, 0.7); */
+  background-color: rgba(255, 255, 255, 0.7);
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   display: flex;
   align-items: center;
@@ -266,6 +268,7 @@ nav {
 nav a {
     color: var(--accent-color);
     text-decoration: none;
+    text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
     transition: color 0.3s ease;
@@ -345,6 +348,305 @@ nav a.active {
 
 }
 
+/* Hero Section */
+.hero-section {
+    display: flex;
+    height: 100vh;
+    padding: 20% ;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    background: url("../images/bg-arthur-hickinbotham-unsplash.jpg")  lightgray 0px -176px / 100% 145.833% no-repeat;;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 10%;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-section {
+        padding: 5%;
+        min-height: 600px;
+    }
+}
+
+/* Hero Header */
+.hero-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.main-heading {
+    color: #fff;
+    letter-spacing: -1.5px;
+    position: relative;
+    font: 700 60px/60px "Playfair Display", serif;
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+@media (max-width: 991px) {
+    .main-heading {
+        font-size: 48px;
+        line-height: 48px;
+    }
+}
+
+@media (max-width: 640px) {
+    .main-heading {
+        font-size: 36px;
+        line-height: 36px;
+    }
+}
+
+.sub-heading {
+    color: #fff;
+    letter-spacing: -1px;
+    position: relative;
+    font: 600 34px/34px "Playfair Display", serif;
+    text-shadow: #09090b;
+    margin: 2rem 0;
+    line-height: 1.4;
+}
+
+@media (max-width: 991px) {
+    .sub-heading {
+        font-size: 48px;
+        line-height: 48px;
+    }
+}
+
+@media (max-width: 640px) {
+    .sub-heading {
+        font-size: 36px;
+        line-height: 36px;
+    }
+}
+
+/* Hero Content */
+.hero-content {
+    display: flex;
+    /* width: 600px;
+    max-width: 600px;
+    padding: 16px 0px 24px 0px; */
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.description-container {
+    display: flex;
+    max-width: 600px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .description-container {
+        max-width: 100%;
+    }
+}
+
+.hero-description {
+    align-self: stretch;
+    color: #FFF;
+    position: relative;
+    font: 400 18px/28px Montserrat, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .hero-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+/* CTA Section */
+.cta-section {
+    display: flex;
+    width: 629px;
+    padding: 24px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .cta-section {
+        width: 100%;
+    }
+}
+
+.cta-buttons {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .cta-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 640px) {
+    .cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* Primary CTA Button */
+.primary-cta {
+    display: flex;
+    height: 40px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    position: relative;
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.primary-cta:hover {
+    background-color: #0ea370;
+    transform: translateY(-1px);
+}
+
+.primary-cta:focus {
+    outline: 2px solid #10b77f;
+    outline-offset: 2px;
+}
+
+.primary-cta:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+    .primary-cta {
+        width: 100%;
+        height: 44px;
+    }
+}
+
+.primary-cta .cta-text {
+    color: #fff;
+    position: relative;
+    font: 500 14px/20px Montserrat, sans-serif;
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Secondary CTA Button */
+.secondary-cta {
+    display: flex;
+    height: 40px;
+    padding: 1px 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid #deede8;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    position: relative;
+    background-color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.secondary-cta:hover {
+    background-color: #f8fffe;
+    border-color: #10b77f;
+    transform: translateY(-1px);
+}
+
+.secondary-cta:focus {
+    outline: 2px solid #10b77f;
+    outline-offset: 2px;
+}
+
+.secondary-cta:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+    .secondary-cta {
+        width: 100%;
+        height: 44px;
+    }
+}
+
+.secondary-cta .cta-text {
+    color: #09090b;
+    position: relative;
+    font: 400 14px/20px Montserrat, sans-serif;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    .primary-cta,
+    .secondary-cta {
+        transition: none;
+    }
+
+    .primary-cta:hover,
+    .secondary-cta:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .primary-cta {
+        border: 2px solid #fff;
+    }
+
+    .secondary-cta {
+        border: 2px solid #09090b;
+    }
+}
+
+/* Focus visible for better keyboard navigation */
+.primary-cta:focus-visible,
+.secondary-cta:focus-visible {
+    outline: 3px solid #10b77f;
+    outline-offset: 2px;
+}
+
+
+
+
 
 
 .main-container {
@@ -356,45 +658,25 @@ nav a.active {
 }
 
 
-.hero-content {
-  width: 100%;
-  height: 551px;
-  background: url("../images/v28_10.png");
+.hero-container {
+  width: 100vw;
+  height: 100vh;
+  background: url("../images/bg-arthur-hickinbotham-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  margin: 32px;
-  opacity: 1;
-  position: absolute;
-  top: 80px;
-  left: 292px;
-  overflow: hidden;
+  padding: 5rem;
 }
+
 .hero-text {
-  width: 652px;
-  height: 551px;
-  background: url("../images/v28_11.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-}
+  padding: 3rem;
+  padding-top: 5rem;
+  }
+
 .label {
   width: 292px;
   height: 50px;
-  background: url("../images/v28_12.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
+  
 }
 .v28_13 {
   width: 292px;
@@ -436,42 +718,14 @@ nav a.active {
   opacity: 1;
   text-align: left;
 }
-.v28_16 {
-  width: 652px;
-  height: 144px;
-  background: url("../images/v28_16.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 50px;
-  left: 0px;
-  overflow: hidden;
-}
-.v28_17 {
-  width: 652px;
-  height: 120px;
-  background: url("../images/v28_17.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-}
-.v28_18 {
-  width: 609px;
+
+
+.title-header {
+  width: 50vw;
   color: rgba(9,9,11,1);
-  position: absolute;
-  top: 0px;
-  left: 0px;
   font-family: Playfair Display;
   font-weight: Bold;
-  font-size: 60px;
-  opacity: 1;
+  font-size: 5rem;
   text-align: left;
 }
 .v28_19 {
