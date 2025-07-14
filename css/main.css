@@ -5,6 +5,7 @@
  :root {
   --primary-color: #00381F;
   --accent-color: #0B5844;
+  --antbear-green: #487457;
   --text-color: #5d5d5d;
   --white: #fff;
   --black: #000;
@@ -83,7 +84,6 @@ button {
 h1 {
   font-size: 2.7rem;
   font-weight: 700;
-  color: var(--white);
   text-align: center;
   margin: 2rem;
 }
@@ -91,7 +91,6 @@ h1 {
 h2 {
   font-size: 2.2rem;
   font-weight: 500;
-  color: #f1f1f1;
   text-align: center;
   margin: 1.5rem;
 }
@@ -99,57 +98,8 @@ h2 {
 h3 {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #f1f1f1;
   text-align: center;
   margin: 1rem;
-}
-
-.accent-text {
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    margin: auto;
-    text-align: center;
-    width: 100%;
-}
-
-.full-width {
-  width: 100%;
-  max-width: 100vw;
-  box-sizing: border-box;
-  display: block; 
-}
-
-.grid-2-col {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.grid-3-col {
-  display: grid;
-  width: 100vw;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.grid-1-2-col {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 2fr; 
-    gap: 3rem; 
-    align-items: center;
-    padding: 3rem 5rem; 
-    max-width: 1200px; 
-    margin: 0 auto; 
 }
 
 .cta-buttons {
@@ -163,19 +113,19 @@ h3 {
 
 .action-button {
   padding: 0.9rem 1.5rem;
-  background-color: var(--accent-color);
+  background-color: var(--antbear-green);
   color: #fff;
   border-radius: 0.5rem;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
-  border: 2px solid  #0B5844;
+  border: 2px solid  #487457;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .action-button:hover {
-    background-color: #118665;
+    background-color: #00381F;
     color: #fff;
     transform: scale(1.01);
     }
@@ -195,7 +145,7 @@ h3 {
 .secondary-button:hover {
     background-color: rgba(255, 255, 255, 0.8);
     color: #fff;
-    border: 2px solid  #0B5844;
+    border: 2px solid  #00381F;
     }
 
 @media (max-width: 780px) {
@@ -232,17 +182,16 @@ h3 {
 /* Sticky Header */
 .sticky-header {
   position: absolute;
-  top: 1rem;
+  
   left: 50%;
   transform: translate(-50%);
-  width: 90%;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.7);
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  border-radius: 1rem;
   z-index: 1000;
   transition: position 0.3s ease-in-out;
 }
@@ -257,6 +206,7 @@ h3 {
     justify-content:flex-end;
     width: 100%;
     gap: 3rem;
+    padding: 0 1.5rem;
 }
 
 nav {
@@ -266,7 +216,7 @@ nav {
     }
 
 nav a {
-    color: var(--accent-color);
+    color: var(--antbear-green);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
@@ -294,13 +244,13 @@ nav a.active {
    }
 
  .icons a {
-    color: var(--accent-color);
+    color: var(--antbear-green);
     font-size: 1.2rem;
     transition: color 0.3s ease;
     }
 
  .icons a:hover {
-      color: var(--primary-color)
+      color: var(--accent-color)
     }
 
 @media (max-width: 880px) {
@@ -527,7 +477,7 @@ nav a.active {
     border-radius: 6px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
     position: relative;
-    background-color: var(--accent-color);
+    background-color: var(--antbear-green);
     text-decoration: none;
     border: none;
     cursor: pointer;
@@ -535,12 +485,12 @@ nav a.active {
 }
 
 .primary-cta:hover {
-    background-color: #0ea370;
+    background-color: var(--accent-color);
     transform: translateY(-1px);
 }
 
 .primary-cta:focus {
-    outline: 2px solid #10b77f;
+    outline: 2px solid #487457;
     outline-offset: 2px;
 }
 
@@ -587,12 +537,12 @@ nav a.active {
 
 .secondary-cta:hover {
     background-color: #f8fffe;
-    border-color: #10b77f;
+    border-color: #487457;
     transform: translateY(-1px);
 }
 
 .secondary-cta:focus {
-    outline: 2px solid #10b77f;
+    outline: 2px solid #487457;
     outline-offset: 2px;
 }
 
@@ -640,7 +590,7 @@ nav a.active {
 /* Focus visible for better keyboard navigation */
 .primary-cta:focus-visible,
 .secondary-cta:focus-visible {
-    outline: 3px solid #10b77f;
+    outline: 3px solid #487457;
     outline-offset: 2px;
 }
 
@@ -732,7 +682,7 @@ nav a.active {
     width: 100%;
     align-items: start;
     gap: 16px;
-    color: rgba(10, 117, 82, 1);
+    color: var(--antbear-green);
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -774,7 +724,7 @@ nav a.active {
 }
 
 .filter-button:focus {
-    outline: 2px solid rgba(10, 117, 82, 1);
+    outline: 2px solid #487457;
     outline-offset: 2px;
 }
 
@@ -915,8 +865,8 @@ nav a.active {
 }
 
 .retreat-type-badge {
-    border-radius: 4px;
-    background-color: rgba(16, 183, 127, 0.9);
+    border-radius: 5px;
+    background-color: #487457;
     align-self: stretch;
     display: flex;
     flex-direction: column;
@@ -925,11 +875,11 @@ nav a.active {
     line-height: 1;
     justify-content: center;
     margin: auto 0;
-    padding: 4px 10px;
+    padding: 5px 10px;
 }
 
 .card-content {
-    height: 188px;
+    /* height: 188px; */
     width: 100%;
     padding: 20px;
 }
@@ -1005,7 +955,7 @@ nav a.active {
 }
 
 .price-amount {
-    color: rgba(16, 183, 127, 1);
+    color: #487457;
     font-size: 18px;
     line-height: 2;
     flex-grow: 1;
@@ -1017,21 +967,7 @@ nav a.active {
     line-height: 1;
 }
 
-/* /* .custom-price-container {
-    align-self: stretch;
-    padding-right: 4px;
-    font-size: 18px;
-    color: rgba(16, 183, 127, 1);
-    white-space: nowrap;
-    line-height: 2;
-    margin: auto 0;
-} */
-/* 
-@media (max-width: 991px) {
-    .custom-price-container {
-        white-space: initial;
-    }
-}
+
 
 .custom-price {
     color: rgba(16, 183, 127, 1);
@@ -1097,11 +1033,7 @@ nav a.active {
 }
 
 .action-button--primary {
-    background-color: rgba(16, 183, 127, 1);
-}
-
-.action-button--secondary {
-    background-color: rgba(16, 183, 127, 1);
+    background-color: var(--antbear-green);
 }
 
 .action-button:hover {
@@ -1245,7 +1177,7 @@ nav a.active {
 
         .main-container {
             display: flex;
-            max-width: 1400px;
+            max-width: 1200px;
             padding: 0px 32px;
             flex-direction: column;
             align-items: center;
@@ -1385,7 +1317,7 @@ nav a.active {
             align-items: center;
             align-self: stretch;
             position: relative;
-            background-color: rgba(232, 247, 240, 0.3);
+            background-color: rgba(72, 116, 87,0.1);
             border-radius: 7px;
         }
 
@@ -1428,7 +1360,7 @@ nav a.active {
         }
 
         .toggle-button:focus {
-            outline: 2px solid #10B77F;
+            outline: 2px solid #487457;
             outline-offset: 2px;
         }
 
@@ -1461,6 +1393,7 @@ nav a.active {
 
         .faq-item[aria-expanded="true"] .answer {
             display: block;
+            background-color: rgba(72, 116, 87,0.1);
         }
 
         .contact-section {
@@ -1806,4 +1739,591 @@ footer .contact-item i {
 }
 
 
-We offer many techniques and modalities to help empower and release whats holding you back from finding vibrant health, happiness and realising your dreams and your full potential. Put together your own program from our variety of experiences. In addition to the program there will be free time to indulge in any of the magical experiences, therapies and adventures on offer. These experiences, be they classical or inwards, wild or creative will leave you feeling refreshed, revived and more at peace.The extra options are charged for separately. See the list on the Retreat landing page under 'Experiences'
+/* Write Your Own Story  */
+
+/* Gallery code from Codepen  https://codepen.io/danishyma/pen/qBNRQmm*/
+
+/* .gallery-wrapper {
+  padding: 2rem 7rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+} */
+
+/* Another way to do the same without declaring in the classes - remove h-x w-x from classes */
+.gallery-wrapper {
+  padding: 2rem 10rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 300px);
+  grid-auto-rows: 200px;
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+}
+
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  filter: drop-shadow(2px 2px 3px rgba(51, 51, 51, 0.3));
+}
+
+.gallery-item .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+  transition: all 400ms ease-in;
+  
+}
+
+
+.w-1{
+  grid-column: span 1;
+}
+.w-2{
+  grid-column: span 2;
+}
+.w-3{
+  grid-column: span 3;
+}
+.w-4{
+  grid-column: span 4;
+}
+.w-5{
+  grid-column: span 5;
+}
+
+.h-1{
+  grid-row: span 1;
+}
+.h-2{
+  grid-row: span 2;
+}
+.h-3{
+  grid-row: span 3;
+}
+.h-4{
+  grid-row: span 4;
+}
+.h-5{
+  grid-row: span 5;
+}
+
+/* ***** LIGHTBOX EFFECT ***** */
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .92);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 4px;
+  /* border-radius: 1%; */
+  /* background-color: white; */
+  border: 0.2px solid silver;
+}
+
+/* Generic Styles */
+/* :root {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  font-family: sans-serif;
+  font-size: 1vw; 
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+	padding: 0;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+   background: -webkit-linear-gradient(130deg, #A155DA, #41B3A3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+@media only screen and (max-width: 800px) {
+  .gallery-wrapper {
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: 1fr;
+    grid-gap: 2;
+    grid-auto-flow: dense;
+  }  
+  .gallery-container:nth-child(3n+2) {
+    grid-column: 1 / span 2;
+    grid-row-end: span 2;
+  }
+  
+  .gallery-container:nth-child(4n+3) {
+    grid-column: 2 / span 1;
+    grid-row-end: span 2;
+  }
+  
+/*  reseting the css for the class within the divs to show a different way to achieve grid control using the nth childs*/
+  .w-1,
+  .w-2,
+  .w-3,
+  .w-4,
+  .w-5 {
+  grid-column: span 1;
+}
+
+.h-1,
+.h-2,
+.h-3,
+.h-4,
+.h-5 {
+  grid-row: span 1;
+}
+  
+}
+
+@media only screen and (max-width: 400px) {
+/* An example to use combined with flex but could also be grids with different repetition of columns  */
+  .gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: wrap;
+    gap: 2.5rem;
+    margin: 5rem;
+  }  
+}
+
+.section-accent {
+    padding: 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-style: italic;
+    color: #000;
+    grid-column: span 2;
+    font-family: 'Playfair Display', serif;
+    text-shadow: none;
+}
+
+.section-subtitle {
+    /* text-align: left; */
+    width: 70%;
+    margin: auto;
+    line-height: 1.4;
+}
+
+
+/* Retreats Program Description */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: minmax(100px, auto);
+    width: 70%;
+    margin: auto;
+    gap: 20px;
+    padding: 1rem 5rem;
+}
+
+.item {
+    background-color: rgba(189, 212, 201, 0.7);
+    border: 1px solid rgba(222, 237, 232, 1);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.item h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: rgba(9, 9, 11, 1);
+    margin-bottom: 10px;
+    font-family: Playfair Display, serif;
+
+}
+
+.item p {
+    font-size: 1rem;
+    color: rgb(85, 85, 88);
+    line-height: 1.5;
+    padding-bottom: 2rem;
+}
+
+
+
+/* Program */
+
+.retreat-outline-section {
+    margin-top: 5rem;
+}
+
+.program-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    color: #09090b;
+}
+
+.detail-item {
+    display: flex;
+    align-items: stretch;
+    gap: 7px;
+    margin-bottom: 17px;
+}
+
+
+
+.program-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    color: #000;
+}
+
+
+
+.detail-label {
+    font-weight: 700;
+    line-height: 2;
+    text-transform: uppercase;
+}
+
+.detail-value {
+    font-weight: 400;
+    line-height: 2;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.target-audience, .schedule-section {
+    margin: 5rem 0;
+    text-align: center;
+    color: #000;
+}
+
+@media (max-width: 991px) {
+    .target-audience {
+        margin-top: 3rem;
+    }
+}
+
+.audience-heading {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.audience-benefits {
+    
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+    .audience-benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.benefit-card {
+    display: flex;
+    min-width: 240px;
+    width: 395px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 0;
+    position: relative;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+
+.benefit-card p {
+    margin: 0;
+}
+
+
+.program-theme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    font-style: italic;
+}
+
+
+
+.day-column {
+    min-width: 240px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 410px;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .day-column {
+        max-width: 100%;
+    }
+}
+
+.day-header {
+    padding-bottom: 1px;
+}
+
+.day-title {
+    font-size: 29px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .day-title {
+        max-width: 100%;
+    }
+}
+
+.day-title em {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.day-schedule {
+    font-size: 14px;
+    line-height: 29px;
+}
+
+@media (max-width: 991px) {
+    .day-schedule {
+        max-width: 100%;
+    }
+}
+
+.schedule-item {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.schedule-item:first-child {
+    margin-top: 0;
+}
+
+@media (max-width: 991px) {
+    .schedule-item {
+        max-width: 100%;
+    }
+}
+
+.schedule-item strong {
+    font-weight: 600;
+}
+
+.schedule-item span {
+    font-weight: 400;
+}
+
+.schedule-item em {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.workshop-activities {
+    margin: 16px 0 0 20px;
+    width: 100%;
+    overflow: hidden;
+    font-weight: 400;
+    padding: 4px 0 0 0;
+    list-style: none;
+}
+
+@media (max-width: 991px) {
+    .workshop-activities {
+        max-width: 100%;
+    }
+}
+
+.workshop-activities li {
+    display: flex;
+    width: 100%;
+    padding-right: 25px;
+    align-items: start;
+    gap: 1px;
+    justify-content: start;
+    margin-top: 4px;
+    position: relative;
+}
+
+.workshop-activities li:first-child {
+    margin-top: 0;
+}
+
+.workshop-activities li:nth-child(2) {
+    padding-right: 302px;
+}
+
+.workshop-activities li:nth-child(3) {
+    padding-right: 347px;
+}
+
+@media (max-width: 991px) {
+    .workshop-activities li {
+        max-width: 100%;
+        padding-right: 20px;
+    }
+
+    .workshop-activities li:nth-child(2),
+    .workshop-activities li:nth-child(3) {
+        padding-right: 20px;
+    }
+}
+
+.workshop-activities li::before {
+    content: "•";
+    margin-right: 8px;
+    color: currentColor;
+}
+
+
+ul.main {
+  list-style: none;
+  max-width: 90%;
+  margin: 20px auto;
+}
+h3 {
+  padding: 0;
+  margin: 0;
+  color: var(--primary-color);
+  text-align: right;
+  line-height: 1.7;
+}
+
+h4 {
+  padding: 0;
+  margin: 0;
+  color: var(--black);
+  text-align: right;
+  line-height: 1.7;
+}
+
+.date {
+  width: 20%;
+  padding: 15% 10% 0 0;
+  float: left;
+}
+
+.date h3 {
+  font-size: 1.5em;
+}
+
+
+
+.events {
+  float: left;
+  width: 80%;
+  border-left: 1px solid #ccc;
+  margin-top: 10%;
+  padding-top: 3%;
+}
+
+.events-detail {
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.events-detail li {
+  padding: 10px;
+  /* border-bottom: 1px dashed #ccc; */
+  line-height: 22px;
+  transition: ease 0.4s all;
+}
+
+
+.event-time {
+  font-weight: 900;
+}
+
+.events-detail li a {
+  text-decoration: none;
+  color: #444;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+
+@media all and (max-width: 641px) {
+  .date {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .events {
+    border: none;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .events-detail {
+    padding: 0;
+  }
+
+  li.date p {
+    margin: 0;
+  }
+}
