@@ -422,7 +422,7 @@ nav a.active {
     align-self: stretch;
     color: #FFF;
     position: relative;
-    font: 400 18px/28px Montserrat, sans-serif;
+    /* font: 400 18px/28px Montserrat, sans-serif; */
     margin: 0;
     text-align: center;
 }
@@ -513,7 +513,7 @@ nav a.active {
 .primary-cta .cta-text {
     color: #fff;
     position: relative;
-    font: 500 14px/20px Montserrat, sans-serif;
+    /* font: 500 14px/20px Montserrat, sans-serif; */
 }
 
 .arrow-icon {
@@ -565,7 +565,7 @@ nav a.active {
 .secondary-cta .cta-text {
     color: #09090b;
     position: relative;
-    font: 400 14px/20px Montserrat, sans-serif;
+    /* font: 400 14px/20px Montserrat, sans-serif; */
 }
 
 /* Accessibility improvements */
@@ -668,7 +668,7 @@ nav a.active {
     align-items: center;
     color: rgba(113, 113, 122, 1);
     justify-content: start;
-    font: 400 16px/24px Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+    /* font: 400 16px/24px Montserrat, -apple-system, Roboto, Helvetica, sans-serif; */
 }
 
 .description-text {
@@ -691,7 +691,7 @@ nav a.active {
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
-    font: 400 14px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+    /* font: 400 14px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif; */
 }
 
 @media (max-width: 991px) {
@@ -744,8 +744,8 @@ nav a.active {
     margin-top: 48px;
     width: 100%;
     align-items: stretch;
-    gap: 32px;
-    font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+    gap: 2rem;
+    /* font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif; */
     font-weight: 400;
     justify-content: center;
     flex-wrap: wrap;
@@ -1069,7 +1069,7 @@ nav a.active {
     color: rgba(9, 9, 11, 1);
     text-align: center;
     justify-content: start;
-    font: 400 14px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif;
+    /* font: 400 14px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif; */
 }
 
 @media (max-width: 991px) {
@@ -1268,7 +1268,7 @@ nav a.active {
             color: #71717a;
             text-align: center;
             position: relative;
-            font: 400 16px/24px Montserrat, sans-serif;
+            /* font: 400 16px/24px Montserrat, sans-serif; */
         }
 
         @media (max-width: 640px) {
@@ -1337,7 +1337,7 @@ nav a.active {
         .question {
             color: #09090b;
             position: relative;
-            font: 400 18px/28px Montserrat, sans-serif;
+            /* font: 400 18px/28px Montserrat, sans-serif; */
         }
 
         @media (max-width: 640px) {
@@ -1384,7 +1384,7 @@ nav a.active {
             display: none;
             padding: 0 16px 16px 16px;
             color: #71717a;
-            font: 400 16px/24px Montserrat, sans-serif;
+            /* font: 400 16px/24px Montserrat, sans-serif; */
             background-color: rgba(232, 247, 240, 0.3);
             border-radius: 0 0 7px 7px;
         }
@@ -1423,7 +1423,7 @@ nav a.active {
             color: #71717a;
             text-align: center;
             position: relative;
-            font: 400 16px/24px Montserrat, sans-serif;
+            /* font: 400 16px/24px Montserrat, sans-serif; */
         }
 
         @media (max-width: 640px) {
@@ -1468,7 +1468,7 @@ nav a.active {
             color: #09090b;
             text-align: center;
             position: relative;
-            font: 400 14px/20px Montserrat, sans-serif;
+            /* font: 400 14px/20px Montserrat, sans-serif; */
         }
 
         @media (max-width: 640px) {
@@ -2062,6 +2062,8 @@ section {
 /* Footer */
 .footer {
     display: flex;
+
+    width: 100vw;
     align-items: space-between;
     gap: 150px;
     padding: 2rem 20%;
