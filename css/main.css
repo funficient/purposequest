@@ -162,7 +162,7 @@ h3 {
 }
 
 .action-button {
-  padding: 0.9rem 1.3rem;
+  padding: 0.9rem 1.5rem;
   background-color: var(--accent-color);
   color: #fff;
   border-radius: 0.5rem;
@@ -175,7 +175,7 @@ h3 {
 }
 
 .action-button:hover {
-    background-color: #084131;
+    background-color: #118665;
     color: #fff;
     transform: scale(1.01);
     }
@@ -1080,7 +1080,7 @@ nav a.active {
     }
 }
 
-.action-button {
+.card-button {
     border-radius: 6px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     display: flex;
@@ -1552,6 +1552,258 @@ nav a.active {
             white-space: nowrap;
             border: 0;
         }
+
+
+        /*----------- Footer */
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--primary-color);
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+	padding: 2rem 1.5rem;
+}
+
+.footer-container {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.footer-container-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* logo */
+.footer-icon { 
+  display: flex;
+	width: 100%;
+	max-width: 10rem;
+	flex-shrink: 0;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.footer-text {
+	align-self: stretch;
+	text-align: center;
+  font-size: 1rem;
+	line-height: 1.4rem;
+	font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+ .footer-body-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1.5rem;
+  width: 100%;
+} 
+
+.footer-contact-section, 
+.footer-navigation-section, 
+.footer-menu-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  text-align: left;
+  gap: 1rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-section-title {
+  margin: 0;
+  padding: 0; 
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  align-self: flex-start;
+  text-align: left ;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18.2px;
+  text-transform: uppercase;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 2.2rem;
+  width: 100%;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  width: 1rem;
+  align-self: center;
+}
+
+footer .contact-item a,
+footer .contact-item p {
+    font-weight: 400;
+    font-size: 0.9rem; 
+}
+
+footer .contact-item i {
+  align-self: center;
+}
+
+
+/* Focus and Hover States */
+.nav-link:hover,
+.nav-link:focus,
+.footer-link:hover,
+.footer-link:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Accessibility Enhancements */
+.submit-button:focus-visible,
+.nav-link:focus-visible,
+.footer-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+} 
+
+.footer-navigation-section {
+  flex: 1;
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav-link {
+  color: #fff;
+  font-size: 14px;
+  line-height: 19.6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 2px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.footer-nav-link:hover,
+.footer-nav-link:focus {
+  text-decoration: underline;
+}
+
+.footer-menu-section {
+  flex: 1;
+}
+
+.footer-menu-section .footer-nav + .footer-nav .footer-section-title {
+  margin-top: 3rem;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  border-top: 1px solid #fff;
+  padding-top: 2rem;
+  padding: 2rem 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin: auto;
+  width: 100%;
+}
+
+.copyright,
+.credits {
+  color: #fff;
+  font-size: 13px;
+  line-height: 19.5px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1280px) {
+	
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  }
+
+.footer-menu-section .footer-nav-list {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+.footer-menu-section .footer-nav-list li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+   .footer-body-container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .footer-section-title {
+      align-self: center;
+      text-align: center ;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+
+  .footer-contact-section,
+  .footer-navigation-section,
+  .footer-menu-section {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer-nav .footer-section-title {
+    margin-top: 3rem;
+  }
+
+  .footer-bottom {
+  margin-top: 3rem;
+  
+}
+
+}
+
+@media (max-width: 640px) {
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+}
 
 
 We offer many techniques and modalities to help empower and release whats holding you back from finding vibrant health, happiness and realising your dreams and your full potential. Put together your own program from our variety of experiences. In addition to the program there will be free time to indulge in any of the magical experiences, therapies and adventures on offer. These experiences, be they classical or inwards, wild or creative will leave you feeling refreshed, revived and more at peace.The extra options are charged for separately. See the list on the Retreat landing page under 'Experiences'
