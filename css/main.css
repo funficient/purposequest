@@ -285,6 +285,11 @@ nav a.active {
     justify-content: center;
     margin-right: 0;
   }
+
+  .hero-header {
+    margin-top: 10rem; /* Example for taller mobile header */
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -318,6 +323,7 @@ nav a.active {
 @media (max-width: 991px) {
     .hero-section {
         padding: 10%;
+        
     }
 }
 
@@ -352,12 +358,20 @@ nav a.active {
         font-size: 48px;
         line-height: 48px;
     }
+
+    .hero-header {
+        margin-top: 12rem;
+    }
 }
 
 @media (max-width: 640px) {
     .main-heading {
         font-size: 36px;
         line-height: 36px;
+    }
+    
+    .hero-header {
+        margin-top: 18rem;
     }
 }
 
@@ -1679,6 +1693,12 @@ nav a.active {
 }
 
 
+@media (max-width: 800px) {
+  .section-subtitle {
+    width: 100%;
+  }
+}
+
 /* Retreats Program Description */
 
 .grid-container {
@@ -1771,6 +1791,18 @@ nav a.active {
     flex-grow: 1;
     flex-shrink: 1;
 }
+
+
+@media (max-width: 991px) {
+    .grid-container {
+
+        grid-template-columns: 1fr ;
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+}
+
+
 
 .target-audience, .schedule-section {
     margin: 5rem 0;
@@ -2035,6 +2067,69 @@ color: #487457;
 section {
     margin: 3rem 0;
 }
+
+@media all and (max-width: 641px) {
+  .date,
+  .events {
+    float: none;
+    width: 100%;
+    display: block;
+    border: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+  }
+
+  /* Center align date section */
+.date {
+  width: 20%;
+  padding: 15% 10% 0 0;
+  float: left;
+  text-align: center;
+}
+
+.date h3,
+.date h4 {
+  text-align: center;
+}
+
+/* Stack and center program details */
+.program-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #09090b;
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  justify-content: center;
+  text-align: center;
+}
+
+/* Responsive: full width on mobile */
+@media all and (max-width: 880px) {
+  .date {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 0;
+  }
+  .program-details {
+    width: 100%;
+    gap: 8px;
+  }
+  .date {
+  margin-bottom: 2rem;
+}
+
+.events {
+  margin-bottom: 2.5rem;
+}
+}
+}
+
 
 
 /* Footer */
