@@ -1327,6 +1327,7 @@ nav a.active {
         .question {
             color: #09090b;
             position: relative;
+            font-size: 1.1rem;
             /* font: 400 18px/28px Montserrat, sans-serif; */
         }
 
