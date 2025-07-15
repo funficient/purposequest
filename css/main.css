@@ -2298,3 +2298,50 @@ section {
         transition: none;
     }
 }
+
+/* ticket call to action button */
+
+
+
+.cta-ticket-button {
+  display: inline-block;
+  position: relative;
+}
+
+.cta-ticket-button a {
+  position: relative;
+  text-align: center;
+  background: var(--antbear-green);
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border: 0;
+  padding: 1rem 2rem;
+  /* border-radius: 12px; */
+  display: inline-block;
+  overflow: visible;
+}
+
+/* Notch circles */
+.cta-ticket-button a::before,
+.cta-ticket-button a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  border: none;
+  z-index: 2;
+  /* box-shadow: 0 0 0 2px var(--antbear-green); Optional: adds a border effect */
+}
+
+.cta-ticket-button a::before {
+  left: -10px; /* Half the width of the circle to align with edge */
+}
+
+.cta-ticket-button a::after {
+  right: -10px;
+}
