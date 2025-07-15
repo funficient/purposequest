@@ -768,12 +768,13 @@ nav a.active {
 @media (max-width: 991px) {
     .retreats-grid {
         max-width: 100%;
-        margin-top: 40px;
+        margin-top: 2rem;
     }
 }
 
+/* Retreat Cards */
 .retreat-card {
-    border-radius: 8px;
+    border-radius: 1rem;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
     min-width: 240px;
@@ -785,23 +786,16 @@ nav a.active {
     border: 1px solid rgba(222, 237, 232, 1);
 }
 
-@media (max-width: 991px) {
-    .retreat-card {
-        max-width: 100%;
-    }
-}
 
 .card-image-container {
     position: relative;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     overflow: hidden;
     color: rgba(255, 255, 255, 1);
 }
 
-@media (max-width: 991px) {
-    .card-image-container {
-        max-width: 100%;
-    }
-}
+
 
 .retreat-hero-image {
     z-index: 0;
@@ -811,49 +805,32 @@ nav a.active {
     max-width: 422px;
 }
 
-@media (max-width: 991px) {
-    .retreat-hero-image {
-        max-width: 100%;
-    }
-}
-
 .retreat-main-image {
     aspect-ratio: 1.65;
     object-fit: cover;
     object-position: center;
     width: 100%;
     z-index: 0;
-    max-width: 422px;
-}
-
-@media (max-width: 991px) {
-    .retreat-main-image {
-        max-width: 100%;
-    }
+    
 }
 
 .image-overlay {
     position: absolute;
     z-index: 0;
     width: 100%;
-    max-width: 422px;
+    /* max-width: 422px; */
     left: 0px;
     right: 0px;
     bottom: 0px;
-    padding: 16px;
+    padding: 1rem;
 }
 
-@media (max-width: 991px) {
-    .image-overlay {
-        max-width: 100%;
-    }
-}
 
 .overlay-content {
     display: flex;
     width: 100%;
     align-items: center;
-    gap: 40px 100px;
+    /* gap: 40px 100px; */
     justify-content: space-between;
 }
 
@@ -885,28 +862,29 @@ nav a.active {
 
 .retreat-type-badge {
     border-radius: 5px;
-    background-color: #487457;
+    background-color: rgba(72, 116, 87, 0.8);
     align-self: stretch;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     font-size: 12px;
-    line-height: 1;
+    line-height: 1.1;
     justify-content: center;
     margin: auto 0;
-    padding: 5px 10px;
+    padding: 5px 12px;
 }
 
 .card-content {
     /* height: 188px; */
     width: 100%;
-    padding: 20px;
+    padding: 1.2rem;
 }
 
 @media (max-width: 991px) {
-    .card-content {
+    .card-image-container, .retreat-card, .retreat-hero-image, .retreat-main-image, .image-overlay, .card-content {
         max-width: 100%;
     }
+
 }
 
 .location-info {
@@ -986,13 +964,11 @@ nav a.active {
     line-height: 1;
 }
 
-
-
 .custom-price {
     color: rgba(16, 183, 127, 1);
     font-size: 18px;
     line-height: 2;
-} */ */
+} 
 
 .capacity-info {
     align-self: stretch;
