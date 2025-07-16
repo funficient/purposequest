@@ -16,6 +16,15 @@
   color: #fff;
 }
 
+@font-face {
+    font-family: 'Motterdam';
+    src: url('css/Motterdam-K74zp.ttf') format('truetype'),
+         url('css/Motterdam-MVanr.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 *,
 *::before,
 *::after {
@@ -353,16 +362,16 @@ nav a.active {
     color: #fff;
     letter-spacing: -1.5px;
     position: relative;
-    font: 700 60px/60px "Playfair Display", serif;
+    font: 500 8rem/8rem "Motterdam", serif;
     margin: 0;
     text-align: center;
-    line-height: 1.4;
+    line-height: 0.8;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 991px) {
     .main-heading {
-        font-size: 48px;
-        line-height: 48px;
+        font-size: 5rem;
     }
 
     .hero-header {
@@ -371,10 +380,6 @@ nav a.active {
 }
 
 @media (max-width: 640px) {
-    .main-heading {
-        font-size: 36px;
-        line-height: 36px;
-    }
     
     .hero-header {
         margin-top: 18rem;
@@ -386,7 +391,7 @@ nav a.active {
     letter-spacing: -1px;
     position: relative;
     width: 80%;
-    font: 500 1.8rem/1.8rem "Inter", sans-serif;
+    font: 500 1.8rem/1.9rem "Inter", sans-serif;
     text-shadow: #09090b;
     margin: 2rem 0;
     line-height: 1.4;
@@ -394,17 +399,11 @@ nav a.active {
 
 @media (max-width: 991px) {
     .sub-heading {
-        font-size: 48px;
-        line-height: 48px;
+        font-size: 1.5rem;
+        line-height: 1.7rem;
     }
 }
 
-@media (max-width: 640px) {
-    .sub-heading {
-        font-size: 36px;
-        line-height: 36px;
-    }
-}
 
 /* Hero Content */
 .hero-content {
