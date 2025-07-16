@@ -316,8 +316,13 @@ nav a.active {
     flex-direction: column;
     align-items: center;
     align-self: stretch;
-    background: url("../images/bg-arthur-hickinbotham-unsplash.jpg")  lightgray 0px -176px / 100% 145.833% no-repeat;;
+    background: url("../images/poi-midlands-meander2.jpg")  -450px -200px  no-repeat;;
     position: relative;
+}
+
+.hero-section.hero-wyos {
+  background: url("../images/drakensberg-pause-for-a-few-minutes-in-nature.jpg") center center no-repeat;
+  background-size: cover;
 }
 
 @media (max-width: 991px) {
