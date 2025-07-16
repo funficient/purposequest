@@ -846,6 +846,8 @@ nav a.active {
     flex-basis: 0%;
     padding: 1px;
     border: 1px solid rgba(222, 237, 232, 1);
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -1065,6 +1067,7 @@ nav a.active {
     text-align: center;
     line-height: 1;
     padding: 20px 20px;
+    margin-top: auto;
 }
 
 @media (max-width: 991px) {
@@ -1281,7 +1284,7 @@ nav a.active {
             text-align: center;
             letter-spacing: -0.9px;
             position: relative;
-            font: 700 36px/40px "Playfair Display", serif;
+            font: 600 36px/40px "Inter", serif;
         }
 
         @media (max-width: 991px) {
@@ -2367,6 +2370,24 @@ section {
   border-radius: 0;
 }
 
+.cta-normal-button {
+  position: relative;
+  text-align: center;
+  /* border: 2px solid var(--antbear-green); */
+  background-color: #FFF;
+  color: var(--antbear-green);
+  font-size: 1rem;
+  text-decoration: underline;
+  
+  
+  padding: 1rem 2.5rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  overflow: visible;
+  cursor: pointer;
+  
+  
+}
 .cta-ticket-button {
   position: relative;
   text-align: center;
@@ -2375,13 +2396,13 @@ section {
   font-size: 1.1rem;
   text-transform: uppercase;
   border: 0;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   transition: background 0.3s ease, color 0.3s ease;
   display: inline-block;
   overflow: visible;
   cursor: pointer;
   text-decoration: none;
-  border-radius: 0; !important
+  border-radius: 5px;
 }
 
 .cta-ticket-button::before,
@@ -2431,7 +2452,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   border: none;
-  border-radius: 0;
+  border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(72, 116, 87, 0.12);
