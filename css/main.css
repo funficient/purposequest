@@ -23,6 +23,42 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'QueenSerif';
+    src: url('css/QueenSerifFree.ttf') format('truetype'),
+         url('css/QueenSerifFree.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Oblata';
+    src: 
+         url('css/OblataDisplayRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Heidan';
+    src: 
+         url('css/HeidanRoundedRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Typey';
+    src: url('css/TypeMctypeface.ttf') format('truetype');
+
+}
+@font-face {
+    font-family: 'Costaline';
+    src: url('css/CostalineThin.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Nadeko';
+    src: url('css/Nadeko.otf') format('opentype');
+}
+
 
 
 *,
@@ -664,18 +700,38 @@ nav a.active {
     }
 }
 
+
+
 .section-title {
     width: 100%;
     color: rgba(9, 9, 11, 1);
     letter-spacing: -0.9px;
-    font: 700 38px/1 Playfair Display, -apple-system, Roboto, Helvetica, sans-serif;
+    font-family: 'Inter', serif; 
+    
+    /* font: 700 38px/1 Playfair Display, -apple-system, Roboto, Helvetica, sans-serif; */
     margin: 0;
 }
+.section-title-alt {
+    width: 100%;
+    color: rgba(9, 9, 11, 1);
+    letter-spacing: 1px;
+    font-family: 'Motterdam', serif; 
+    font-size: 4rem;
+    line-height: 1;
+    margin: 0;
+}
+
+
 
 @media (max-width: 991px) {
     .section-title {
         max-width: 100%;
     }
+    .section-title-alt {
+    
+    font-size: 3rem;
+    
+}
 }
 
 .section-description {
@@ -1542,7 +1598,6 @@ nav a.active {
 
 
 @media only screen and (max-width: 800px) {
-  
 
     .gallery-wrapper {
     display: grid;
@@ -1567,8 +1622,6 @@ nav a.active {
     
   }
 
-  
-/* Responsive adjustments */
 
     .gallery-wrapper {
         flex-direction: column;
@@ -1624,14 +1677,19 @@ nav a.active {
   transition: all 400ms ease-in;
 }
 
-/* Section accent text */
 .section-accent {
   padding: 0;
   font-size: 1.5rem;
-  font-style: italic;
+  text-decoration: none;
+  /* font-style: italic; */
   color: #000;
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Motterdam', serif; */
+   font-family: 'Costaline', serif;
+    text-shadow: none;
 }
+
+
+
 
 /* Responsive adjustments */
 @media only screen and (max-width: 800px) {
@@ -1657,16 +1715,7 @@ nav a.active {
 
 /* end */
 
-.section-accent {
-    padding: 0;
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-style: italic;
-    color: #000;
-    grid-column: span 2;
-    font-family: 'Playfair Display', serif;
-    text-shadow: none;
-}
+
 
 .section-subtitle {
     /* text-align: left; */
@@ -1708,11 +1757,12 @@ nav a.active {
 }
 
 .item h2 {
-    font-size: 1.7rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    
+    font-weight: 500;
     color: rgba(9, 9, 11, 1);
     margin-bottom: 10px;
-    font-family: Playfair Display, serif;
+    font-family: 'Inter', serif;
 
 }
 
@@ -2314,6 +2364,7 @@ section {
   width: 100vw;
   margin: auto;
   margin-top: -4rem;
+  border-radius: 0;
 }
 
 .cta-ticket-button {
@@ -2330,6 +2381,7 @@ section {
   overflow: visible;
   cursor: pointer;
   text-decoration: none;
+  border-radius: 0; !important
 }
 
 .cta-ticket-button::before,
@@ -2366,49 +2418,6 @@ section {
 
 }
 
-/* .cta-ticket-button {
-  display: inline-block;
-  position: relative;
-}
-
-.cta-ticket-button a {
-  position: relative;
-  text-align: center;
-  background: var(--antbear-green);
-  color: #fff;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  border: 0;
-  padding: 1rem 2rem;
-  /* border-radius: 12px; */
-  /* display: inline-block;
-  overflow: visible;
-} */ */
-
-/* Notch circles
-.cta-ticket-button a::before,
-.cta-ticket-button a::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border-radius: 50%;
-  border: none;
-  z-index: 2;
-  /* box-shadow: 0 0 0 2px var(--antbear-green); Optional: adds a border effect */
-}
-
-/* .cta-ticket-button a::before {
-  left: -10px; /* Half the width of the circle to align with edge */
-}
-/* 
-.cta-ticket-button a::after {
-  right: -10px;
-} */ 
-
 
 /* buttons */
 
@@ -2422,7 +2431,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   border: none;
-  border-radius: 12px;
+  border-radius: 0;
   cursor: pointer;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(72, 116, 87, 0.12);
@@ -2448,4 +2457,14 @@ section {
     font-size: 1rem;
     padding: 0.9rem 1rem;
   }
+
+  
+}
+@media (max-width: 1000px) {
+
+.center-button-container {
+  margin-top: 0;
+}
+
+
 }
