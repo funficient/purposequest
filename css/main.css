@@ -385,7 +385,8 @@ nav a.active {
     color: #fff;
     letter-spacing: -1px;
     position: relative;
-    font: 600 34px/34px "Playfair Display", serif;
+    width: 80%;
+    font: 500 1.8rem/1.8rem "Inter", sans-serif;
     text-shadow: #09090b;
     margin: 2rem 0;
     line-height: 1.4;
@@ -688,7 +689,7 @@ nav a.active {
     align-items: center;
     color: rgba(113, 113, 122, 1);
     justify-content: start;
-    /* font: 400 16px/24px Montserrat, -apple-system, Roboto, Helvetica, sans-serif; */
+    font-family: "Inter", sans-serif;
 }
 
 .description-text {
