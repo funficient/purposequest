@@ -2348,7 +2348,7 @@ section {
 }
 
 .cta-ticket-button::before {
-  left: -10px;
+  left: -10.5px;
    border-radius: 0 10px 10px 0;
   clip-path: inset(0 0 0 50%);
 }
@@ -2366,7 +2366,7 @@ section {
 
 }
 
-.cta-ticket-button {
+/* .cta-ticket-button {
   display: inline-block;
   position: relative;
 }
@@ -2381,11 +2381,11 @@ section {
   border: 0;
   padding: 1rem 2rem;
   /* border-radius: 12px; */
-  display: inline-block;
+  /* display: inline-block;
   overflow: visible;
-}
+} */ */
 
-/* Notch circles */
+/* Notch circles
 .cta-ticket-button a::before,
 .cta-ticket-button a::after {
   content: "";
@@ -2401,10 +2401,51 @@ section {
   /* box-shadow: 0 0 0 2px var(--antbear-green); Optional: adds a border effect */
 }
 
-.cta-ticket-button a::before {
+/* .cta-ticket-button a::before {
   left: -10px; /* Half the width of the circle to align with edge */
 }
-
+/* 
 .cta-ticket-button a::after {
   right: -10px;
+} */ 
+
+
+/* buttons */
+
+.cta-button {
+  display: inline-block;
+  position: relative;
+  padding: 1rem 2rem;
+  background: var(--antbear-green, #487457);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(72, 116, 87, 0.12);
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background: #3a6b4c;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(72, 116, 87, 0.18);
+  outline: none;
+}
+
+.cta-button:active {
+  background: #2e523a;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .cta-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.9rem 1rem;
+  }
 }
