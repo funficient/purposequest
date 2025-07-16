@@ -2301,7 +2301,14 @@ section {
 
 /* ticket call to action button */
 
-
+.center-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin: auto;
+  margin-top: -4rem;
+}
 
 .cta-ticket-button {
   display: inline-block;
