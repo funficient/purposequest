@@ -156,6 +156,14 @@ h3 {
   
 }
 
+/* .cta-buttons {
+    
+    align-items: flex-start;
+    align-self: stretch;
+    position: relative;
+} */
+
+/* 
 .action-button {
   padding: 0.9rem 1.5rem;
   background-color: var(--antbear-green);
@@ -173,9 +181,9 @@ h3 {
     background-color: #00381F;
     color: #fff;
     transform: scale(1.01);
-    }
+    } */
 
-.secondary-button {
+/* .secondary-button {
   padding: 0.9rem 1.3rem;
   background-color: rgba(0, 0, 0, 0.3);
   color: var(--white);
@@ -191,7 +199,7 @@ h3 {
     background-color: rgba(255, 255, 255, 0.8);
     color: #fff;
     border: 2px solid  #00381F;
-    }
+    } */
 
 @media (max-width: 780px) {
   .grid-2-col, .grid-3-col {
@@ -232,7 +240,6 @@ h3 {
 /* Sticky Header */
 .sticky-header {
   position: absolute;
-  
   left: 50%;
   transform: translate(-50%);
   width: 100%;
@@ -506,13 +513,7 @@ nav a.active {
     }
 }
 
-.cta-buttons {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    align-self: stretch;
-    position: relative;
-}
+
 
 @media (max-width: 991px) {
     .cta-buttons {
@@ -530,24 +531,24 @@ nav a.active {
 /* Primary CTA Button */
 .primary-cta {
     display: flex;
-    height: 40px;
-    padding: 0px 16px;
+    padding: 1rem 2rem;
     justify-content: center;
     align-items: center;
     gap: 8px;
-    border-radius: 6px;
+    border-radius: 5px;
+    border: solid 1px #fff ;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
     position: relative;
     background-color: var(--antbear-green);
     text-decoration: none;
-    border: none;
+    
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .primary-cta:hover {
     background-color: var(--accent-color);
-    transform: translateY(-1px);
+    
 }
 
 .primary-cta:focus {
@@ -555,21 +556,17 @@ nav a.active {
     outline-offset: 2px;
 }
 
-.primary-cta:active {
-    transform: translateY(0);
-}
 
 @media (max-width: 640px) {
     .primary-cta {
         width: 100%;
-        height: 44px;
+        
     }
 }
 
 .primary-cta .cta-text {
     color: #fff;
     position: relative;
-    /* font: 500 14px/20px Montserrat, sans-serif; */
 }
 
 .arrow-icon {
@@ -582,11 +579,10 @@ nav a.active {
 /* Secondary CTA Button */
 .secondary-cta {
     display: flex;
-    height: 40px;
-    padding: 1px 25px;
+    padding: 1rem 2rem;
     justify-content: center;
     align-items: center;
-    border-radius: 6px;
+    border-radius: 5px;
     border: 1px solid #deede8;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
     position: relative;
@@ -597,18 +593,15 @@ nav a.active {
 }
 
 .secondary-cta:hover {
-    background-color: #f8fffe;
-    border-color: #487457;
-    transform: translateY(-1px);
+    background-color: #487457;
+    border-color: #fff;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
 }
 
 .secondary-cta:focus {
     outline: 2px solid #487457;
     outline-offset: 2px;
-}
-
-.secondary-cta:active {
-    transform: translateY(0);
 }
 
 @media (max-width: 640px) {
@@ -621,7 +614,12 @@ nav a.active {
 .secondary-cta .cta-text {
     color: #09090b;
     position: relative;
-    /* font: 400 14px/20px Montserrat, sans-serif; */
+    text-transform: capitalize;
+}
+
+.secondary-cta .cta-text:hover {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Accessibility improvements */
@@ -763,7 +761,6 @@ nav a.active {
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
-    /* font: 400 14px/1 Montserrat, -apple-system, Roboto, Helvetica, sans-serif; */
 }
 
 @media (max-width: 991px) {
@@ -817,7 +814,6 @@ nav a.active {
     width: 100%;
     align-items: stretch;
     gap: 2rem;
-    /* font-family: Montserrat, -apple-system, Roboto, Helvetica, sans-serif; */
     font-weight: 400;
     justify-content: center;
     flex-wrap: wrap;
@@ -1849,7 +1845,7 @@ nav a.active {
 }
 
 .audience-heading {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 2;
     letter-spacing: 2px;
@@ -1983,13 +1979,11 @@ nav a.active {
 }
 
 
-
-
 ul.main {
   list-style: none;
   max-width: 100%;
   margin:  auto;
-  margin-left: 20%;
+  margin-left: 40%;
 }
 h3 {
   padding: 0;
@@ -2009,8 +2003,8 @@ h4 {
 }
 
 .date {
-  width: 20%;
-  padding: 15% 10% 0 0;
+  width: max-content;
+  padding: 0;
   float: left;
 }
 
@@ -2045,20 +2039,27 @@ h4 {
 .event-time {
   font-weight: 900;
 }
-
+/* 
 .events-detail li a {
   text-decoration: none;
   color: #444;
   width: 100%;
   height: 100%;
   display: block;
-}
+} */
 
 
 
 @media all and (max-width: 641px) {
+
+ .program-section {
+     width: 100vw;
+     margin-left: -30%;
+    }
   .date {
     width: 100%;
+    margin: 0;
+    padding: 0;
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
   }
@@ -2369,6 +2370,11 @@ section {
   border-radius: 0;
 }
 
+.cta-banner {
+    padding: 2rem;
+    margin: 2rem;
+}
+
 .cta-normal-button {
   position: relative;
   text-align: center;
@@ -2377,16 +2383,13 @@ section {
   color: var(--antbear-green);
   font-size: 1rem;
   text-decoration: underline;
-  
-  
   padding: 1rem 2.5rem;
   transition: background 0.3s ease, color 0.3s ease;
   display: inline-block;
   overflow: visible;
   cursor: pointer;
-  
-  
 }
+
 .cta-ticket-button {
   position: relative;
   text-align: center;
@@ -2413,16 +2416,16 @@ section {
   width: 20px;
   height: 20px;
   background: #e9e9e9;
-  /* border-radius: 50%; */
   z-index: 2;
-  box-shadow: 0 5px 16px 8px rgba(72, 116, 87, 0.8); /* soft green shadow */
+  box-shadow: 0 5px 16px 8px rgba(72, 116, 87, 0.8); 
   
 }
 
 .cta-ticket-button::before {
-  left: -10.5px;
+   left: -10.5px;
    border-radius: 0 10px 10px 0;
-  clip-path: inset(0 0 0 50%);
+   clip-path: inset(0 0 0 50%);
+   
 }
 
 .cta-ticket-button::after {
@@ -2437,9 +2440,6 @@ section {
   color: #fff;
 
 }
-
-
-/* buttons */
 
 .cta-button {
   display: inline-block;
@@ -2482,9 +2482,8 @@ section {
 }
 @media (max-width: 1000px) {
 
-.center-button-container {
-  margin-top: 0;
-}
-
+    .center-button-container {
+    margin-top: 0;
+    }
 
 }
