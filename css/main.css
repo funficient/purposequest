@@ -2390,6 +2390,9 @@ section {
   cursor: pointer;
 }
 
+
+
+
 .cta-ticket-button {
   position: relative;
   text-align: center;
@@ -2405,6 +2408,7 @@ section {
   cursor: pointer;
   text-decoration: none;
   border-radius: 5px;
+
 }
 
 .cta-ticket-button::before,
