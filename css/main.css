@@ -377,6 +377,10 @@ nav a.active {
   background: url("../images/poi-midlands-meander2.jpg") center center no-repeat;
   background-size: cover;
 }
+.hero-section.hero-rr {
+  background: url("../images/sunset.jpg") center center no-repeat;
+  background-size: cover;
+}
 
 @media (max-width: 991px) {
     .hero-section {
@@ -1315,7 +1319,11 @@ nav a.active {
             color: #71717a;
             text-align: center;
             position: relative;
-            /* font: 400 16px/24px Montserrat, sans-serif; */
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            width: 70%;
+            margin: auto;
+
         }
 
         @media (max-width: 640px) {
@@ -1713,7 +1721,6 @@ nav a.active {
 
 
 .section-subtitle {
-    /* text-align: left; */
     width: 70%;
     margin: auto;
     line-height: 1.4;
@@ -1774,6 +1781,8 @@ nav a.active {
 
 .retreat-outline-section {
     margin-top: 5rem;
+    padding: 0;
+
 }
 
 .program-details {
@@ -1807,6 +1816,16 @@ nav a.active {
     padding: 0;
 }
 
+.container {
+      display: flex;
+      flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: auto;
+}
+
+
 .detail-label {
     font-weight: 700;
     line-height: 2;
@@ -1823,14 +1842,149 @@ nav a.active {
 
 @media (max-width: 991px) {
     .grid-container {
-
         grid-template-columns: 1fr ;
         width: 100%;
         padding: 1rem 1rem;
     }
 }
 
+/* 1) Scope only to your program section */
+.program-section .container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;   
+  margin: 2rem auto;   
+  padding: 0;
+  display: block;      
+}
 
+/* 2) Draw the centre line */
+.program-section .event-details::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  bottom: 0;
+  left: 50%;
+  margin-left: 1rem;
+  width: 1px;
+  background: #ccc;
+}
+
+/* 3) Reset list, strip bullets/margins */
+.program-section .main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;  
+  width: 100vw;
+}
+
+/* 4) Date + Events columns */
+.program-section .main > li.date,
+.program-section .main > li.events {
+  float: left;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+/* ensure each date starts a new ‘row’ pair */
+.program-section .main > li.date {
+  clear: both;
+  
+}
+
+/* event details on the other half */
+.program-section .main > li.events {
+  text-align: left;
+  padding-left: 1rem;
+  width: 50%;
+  /* margin-top: 5rem; */
+}
+
+:last-child li.events {
+  margin-bottom: 3rem; /* space after last event */
+}   
+/* 5) Tidy up your inner event list */
+.program-section .events-detail {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* fix your time/name alignment inside each event */
+.program-section .event-time {
+  display: inline-block;
+  width: 100%;         /* fixed column for times */
+  /* text-align: right; */
+  margin-right: .5rem;
+}
+
+.program-section .event-name {
+  display: inline-block;
+}
+
+/* make each event <li> a flex row */
+.program-section .events-detail li {
+  display: flex;
+  align-items: flex-start;  /* or center, if you prefer */
+  /* margin-bottom: 1rem; */
+}
+
+/* left column: time, fixed width, no wrap */
+.program-section .event-time {
+  flex: 0 0 5rem;        /* adjust 5rem to fit your longest time */
+  /* text-align: right; */
+  white-space: nowrap;   /* prevents the time from ever breaking */
+  margin-right: .5rem;
+}
+
+/* right column: event name, flex‐grow so it fills remaining space */
+.program-section .event-name {
+  flex: 1;
+}
+
+@media (max-width: 880px) {
+
+  /* 2) make every date+events full width and centre them */
+  .program-section .main {
+    width: 100vw;
+    padding: 0 2rem;
+    
+    
+  }
+  .program-section .main > li.date,
+  .program-section .main > li.events {
+    float: none;
+    width: 100%;
+    clear: none;
+    text-align: center;
+    
+    
+  }
+
+  /* 3) stack each individual event’s time + name */
+  .program-section .events-detail li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    
+  }
+
+  /* .program-section .event-time {
+    white-space: wrap; keep time on one line
+    
+  } */
+
+  .program-section .event-name {
+    text-align: left;
+  }
+}
+
+
+/* end of copilot fix */
 
 .target-audience, .schedule-section {
     margin: 5rem 0;
@@ -1982,14 +2136,16 @@ nav a.active {
 ul.main {
   list-style: none;
   max-width: 100%;
-  margin:  auto;
-  margin-left: 40%;
+  margin:  0;
+  margin: auto;
+  /* margin-left: 40%; */
 }
+
+
 h3 {
   padding: 0;
   margin: 0;
   color: var(--primary-color);
-  
   text-align: right;
   line-height: 1.7;
 }
@@ -2005,19 +2161,20 @@ h4 {
 .date {
   width: max-content;
   padding: 0;
+  margin: 0;
   float: left;
 }
 
 .date h3 {
   font-size: 1.3em;
 }
-
+/* 
 .events {
   float: left;
   width: 80%;
   border-left: 1px solid #ccc;
   margin-top: 10%;
-}
+} */
 
 .events-detail {
   max-width: 600px;
@@ -2027,12 +2184,12 @@ h4 {
 .events-detail li {
   padding: 10px;
   /* border-bottom: 1px dashed #ccc; */
-  line-height: 22px;
+  line-height: 20px;
   transition: ease 0.4s all;
   color: #444;
-  width: 100%;
+  /* width: 100%;
   height: 100%;
-  display: block;
+  display: block; */
 }
 
 
@@ -2054,7 +2211,7 @@ h4 {
 
  .program-section {
      width: 100vw;
-     margin-left: -30%;
+     /* margin-left: -30%; */
     }
   .date {
     width: 100%;
@@ -2390,9 +2547,6 @@ section {
   cursor: pointer;
 }
 
-
-
-
 .cta-ticket-button {
   position: relative;
   text-align: center;
@@ -2450,16 +2604,17 @@ section {
   position: relative;
   padding: 1rem 2rem;
   background: var(--antbear-green, #487457);
+  
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid #fff;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(72, 116, 87, 0.12);
-  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, 
 }
 
 .cta-button:hover,
