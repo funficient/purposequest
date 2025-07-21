@@ -107,15 +107,6 @@ h3 {
   margin: 1rem;
 }
 
-.cta-buttons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
-  
-}
-
 @media (max-width: 780px) {
 
   h1 {
@@ -127,18 +118,6 @@ h3 {
     font-size: 1.8rem;
     margin: 1rem;
   } 
-
-  .cta-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-  }
-
-  .cta-buttons button,
-  .cta-buttons .action-button,
-  .cta-buttons .secondary-button {
-    width: 100%;
-  }
 
 }
 
@@ -248,10 +227,6 @@ nav a.active {
     margin-right: 0;
   }
 
-  .hero-header {
-    margin-top: 10rem; 
-  }
-
 }
 
 @media (max-width: 600px) {
@@ -273,6 +248,7 @@ nav a.active {
 
 
 /* --- Hero Section --- */
+
 .hero-section {
     display: flex;
     height: 100vh;
@@ -280,7 +256,7 @@ nav a.active {
     flex-direction: column;
     align-items: center;
     align-self: stretch;
-    background: url("../images/drakensberg-pause-for-a-few-minutes-in-nature.jpg")  center center  no-repeat;;
+    background: url("../images/drakensberg-pause-for-a-few-minutes-in-nature.jpg")  center center  no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -297,8 +273,8 @@ nav a.active {
 @media (max-width: 991px) {
     .hero-section {
         padding: 10%;
-        
     }
+
 }
 
 @media (max-width: 640px) {
@@ -308,25 +284,30 @@ nav a.active {
     }
 }
 
-/* Hero Header */
 .hero-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     text-align: center;
+    max-width: 1000px;
 }
 
 .main-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    position: relative;
     color: #fff;
     letter-spacing: -1.5px;
-    position: relative;
     font: 500 8rem/8rem "Motterdam", serif;
     margin: 0;
     text-align: center;
     line-height: 0.8;
     margin-bottom: 1rem;
 }
+
 
 @media (max-width: 991px) {
     .main-heading {
@@ -341,7 +322,7 @@ nav a.active {
 @media (max-width: 640px) {
     
     .hero-header {
-        margin-top: 18rem;
+        margin-top: 18.5rem;
     }
 }
 
@@ -350,10 +331,9 @@ nav a.active {
     letter-spacing: -1px;
     position: relative;
     width: 80%;
-    font: 500 1.8rem/1.9rem "Inter", sans-serif;
+    font: 500 1.8rem/1.4rem "Inter", sans-serif;
     text-shadow: #09090b;
     margin: 2rem 0;
-    line-height: 1.4;
 }
 
 @media (max-width: 991px) {
@@ -362,6 +342,52 @@ nav a.active {
         line-height: 1.7rem;
     }
 }
+
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 1rem;
+    position: relative;
+    margin: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 991px) {
+    .cta-section {
+        width: 100%;
+    }
+    
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .cta-buttons button,
+  .cta-buttons .action-button,
+  .cta-buttons .secondary-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+    .cta-buttons {
+        flex-direction: column;
+    }
+}
+
+
 
 
 /* Hero Content */
@@ -401,7 +427,6 @@ nav a.active {
     align-self: stretch;
     color: #FFF;
     position: relative;
-    /* font: 400 18px/28px Montserrat, sans-serif; */
     margin: 0;
     text-align: center;
 }
@@ -413,36 +438,8 @@ nav a.active {
     }
 }
 
-/* CTA Section */
-.cta-section {
-    display: flex;
-    width: 629px;
-    padding: 24px 0px;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-}
-
-@media (max-width: 991px) {
-    .cta-section {
-        width: 100%;
-    }
-}
 
 
-
-@media (max-width: 991px) {
-    .cta-buttons {
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 640px) {
-    .cta-buttons {
-        flex-direction: column;
-        gap: 12px;
-    }
-}
 
 /* Primary CTA Button */
 .primary-cta {
@@ -1178,13 +1175,7 @@ nav a.active {
             position: relative;
         }
 
-        .main-heading {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            align-self: stretch;
-            position: relative;
-        }
+
 
         .title {
             align-self: stretch;
