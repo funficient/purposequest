@@ -345,21 +345,109 @@ nav a.active {
 
 .cta-section {
     display: flex;
+    margin: auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 80%;
     padding: 1rem;
     position: relative;
-    margin: auto;
+    
 }
 
 .cta-buttons {
   display: flex;
+  width: 100%;
   gap: 1rem;
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
+}
+
+.cta-banner {
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.center-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  margin-top: -4rem;
+  border-radius: 0;
+}
+
+.secondary-cta {
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #deede8;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+    background-color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.secondary-cta:hover {
+    background-color: #487457;
+    border-color: #fff;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.secondary-cta:focus {
+    outline: 2px solid #487457;
+    outline-offset: 2px;
+}
+
+.cta-text {
+    color: #09090b;
+    position: relative;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+
+.cta-text:hover {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    .primary-cta,
+    .secondary-cta {
+        transition: none;
+    }
+
+    .primary-cta:hover,
+    .secondary-cta:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .primary-cta {
+        border: 2px solid #fff;
+    }
+
+    .secondary-cta {
+        border: 2px solid #09090b;
+    }
+}
+
+/* Focus visible for better keyboard navigation */
+.primary-cta:focus-visible,
+.secondary-cta:focus-visible {
+    outline: 3px solid #487457;
+    outline-offset: 2px;
 }
 
 @media (max-width: 991px) {
@@ -385,7 +473,13 @@ nav a.active {
     .cta-buttons {
         flex-direction: column;
     }
+
+    .secondary-cta {
+        width: 100%;
+    }
 }
+
+/*================  */
 
 
 
@@ -489,82 +583,6 @@ nav a.active {
     flex-shrink: 0;
 }
 
-/* Secondary CTA Button */
-.secondary-cta {
-    display: flex;
-    padding: 1rem 2rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    border: 1px solid #deede8;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-    position: relative;
-    background-color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
-}
-
-.secondary-cta:hover {
-    background-color: #487457;
-    border-color: #fff;
-    color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-
-.secondary-cta:focus {
-    outline: 2px solid #487457;
-    outline-offset: 2px;
-}
-
-@media (max-width: 640px) {
-    .secondary-cta {
-        width: 100%;
-        height: 44px;
-    }
-}
-
-.secondary-cta .cta-text {
-    color: #09090b;
-    position: relative;
-    text-transform: capitalize;
-}
-
-.secondary-cta .cta-text:hover {
-    color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Accessibility improvements */
-@media (prefers-reduced-motion: reduce) {
-    .primary-cta,
-    .secondary-cta {
-        transition: none;
-    }
-
-    .primary-cta:hover,
-    .secondary-cta:hover {
-        transform: none;
-    }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    .primary-cta {
-        border: 2px solid #fff;
-    }
-
-    .secondary-cta {
-        border: 2px solid #09090b;
-    }
-}
-
-/* Focus visible for better keyboard navigation */
-.primary-cta:focus-visible,
-.secondary-cta:focus-visible {
-    outline: 3px solid #487457;
-    outline-offset: 2px;
-}
 
 
 /* Retreats section */
@@ -2431,20 +2449,14 @@ section {
   float: left;
   margin-top: 8px;
 }
-.cta-text {
-  padding-left: 15px;
-  display: inline-block;
-}
+
 .cta-text h4 {
   color: #fff;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 2px;
 }
-.cta-text span {
-  color: #757575;
-  font-size: 15px;
-}
+
 .footer-content {
   position: relative;
   z-index: 2;
@@ -2568,20 +2580,8 @@ section {
 
 /* ticket call to action button */
 
-.center-button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  margin: auto;
-  margin-top: -4rem;
-  border-radius: 0;
-}
 
-.cta-banner {
-    padding: 2rem;
-    margin: 2rem;
-}
+
 
 .cta-normal-button {
   position: relative;
@@ -2715,13 +2715,5 @@ button i.fa-ticket {
     font-size: 1rem;
     padding: 0.9rem 1rem;
   }
-
-  
-}
-@media (max-width: 1000px) {
-
-    .center-button-container {
-    margin-top: 0;
-    }
 
 }
