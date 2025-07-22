@@ -479,17 +479,14 @@ nav a.active {
     }
 }
 
-/*================  */
+/*============= ARILL NEED TO FIGURE OUT IF THIS SECTION IS USED ===  */
 
 
 
 
 /* Hero Content */
 .hero-content {
-    display: flex;
-    /* width: 600px;
-    max-width: 600px;
-    padding: 16px 0px 24px 0px; */
+
     flex-direction: column;
     align-items: flex-start;
     position: relative;
@@ -531,8 +528,6 @@ nav a.active {
         line-height: 24px;
     }
 }
-
-
 
 
 /* Primary CTA Button */
@@ -583,7 +578,7 @@ nav a.active {
     flex-shrink: 0;
 }
 
-
+/* ============= */
 
 /* Retreats section */
 .retreats-section {
@@ -592,27 +587,37 @@ nav a.active {
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
-    padding: 80px 260px;
+    padding: 0 15%;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
     .retreats-section {
-        padding: 0 20px;
+        padding: 0 2rem;
     }
 }
 
 .main-container {
+    display: flex;  
     width: 100%;
     max-width: 1400px;
-    padding: 0 32px;
+    padding: 0 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    align-self: stretch;
+    position: relative;
+    margin: 0 auto;
 }
 
 @media (max-width: 991px) {
     .main-container {
         max-width: 100%;
-        padding: 0 20px;
+        padding: 0 1rem;
+        gap: 1rem;
     }
 }
+
+
 
 .section-header {
     display: flex;
@@ -1114,7 +1119,7 @@ nav a.active {
 
 @media (max-width: 480px) {
     .retreats-section {
-        padding: 40px 20px;
+        padding: 2rem 1rem;
     }
 
     .section-title {
@@ -1158,31 +1163,6 @@ nav a.active {
             }
         }
 
-        .main-container {
-            display: flex;
-            max-width: 1200px;
-            padding: 0px 32px;
-            flex-direction: column;
-            align-items: center;
-            gap: 48px;
-            align-self: stretch;
-            position: relative;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 991px) {
-            .main-container {
-                padding: 0px 24px;
-                gap: 40px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .main-container {
-                padding: 0px 16px;
-                gap: 32px;
-            }
-        }
 
         .header-section {
             display: flex;
