@@ -1755,11 +1755,23 @@ nav a.active {
 
 .program-details {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 50px;
     color: #09090b;
+    
+}
+
+
+.program-detail-description {   
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #424242;
+    text-align: center;
+    max-width: 65%;
+    margin: auto;
+margin-bottom: 1.2rem;
 }
 
 .detail-item {
