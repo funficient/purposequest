@@ -470,10 +470,11 @@ nav a.active {
 /* CTA Section */
 .cta-section {
     display: flex;
-    width: 629px;
+    /* width: 100vw; */
+    /* margin: auto; */
     padding: 24px 0px;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     position: relative;
 }
 
@@ -556,7 +557,7 @@ nav a.active {
     border: 1px solid #deede8;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
     position: relative;
-    background-color: #fff;
+    background-color: var(--accent-golden);
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
@@ -582,7 +583,8 @@ nav a.active {
 }
 
 .secondary-cta .cta-text {
-    color: #09090b;
+    color: #fff;
+    padding-right: 1rem;
     position: relative;
     text-transform: capitalize;
 }
@@ -2313,6 +2315,7 @@ section {
     gap: 150px;
     padding: 2rem 20%;
     background-color: #487457;
+    background: linear-gradient(90deg,rgba(72, 116, 87, 1) 0%, rgba(100, 179, 133, 1) 80%);
 }
 
 .logo-section {
