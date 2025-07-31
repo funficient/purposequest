@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purpose Quest | Retreats in the Drakensberg</title>
+  <meta name="description" content="Sign up to our newsletter to be the first to know of our transformative retreats in the tranquil beauty of the Drakensberg mountains. Sign up today!">
+  <meta property="og:title" content="Purpose Quest | Retreats to find your purpose in the Drakensberg">
+  <meta property="og:description" content="Discover your purpose in a tranquil, nurturing environment.">
+  <meta property="og:image" content="images/sunset.jpg">
+  <meta property="og:url" content="https://purposequest.world">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Purpose Quest">
+  
+  <link rel="icon" type="image/x-icon" href="images/compass_5616439.png">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+    
+<body>
+
+ <main>
+          
+    <section class="content-overlay no-shadow white">
+        <!-- <button class="close-popup" aria-label="Close popup">&times;</button> -->
+            <div class="content-container no-shadow">
+                <div class="image-column">
+                    <img
+                        src="images/journal-mockup.png"
+                        alt="Journal mockup "
+                        class="portrait-image"
+                    />
+                </div>
+                <div class="form-column">
+                    <div class="subscription-content">
+
+                        <img
+                            src="images/purposequest logo.svg"
+                            alt="Company logo"
+                            class="company-logo"
+                        />
+                        <h1 class="newsletter-heading">
+                            Create a life by design,<br />not by default.
+                        </h1>
+                        <p class="subtitle-text">
+                            Subscribe today and get a free 30 day digital journal with prompts, recipes, and more.
+                        </p>
+                        <form class="subscription-form" role="form" aria-label="Newsletter subscription" action="https://formsubmit.co/purposequestretreats@gmail.com" method="POST">
+                            <div class="email-input-wrapper">
+                                <label for="email-input" class="visually-hidden">Email address</label>
+                                <input
+                                    type="email"
+                                    id="email-input"
+                                    name="email"
+                                    class="email-input"
+                                    placeholder="Enter your email"
+                                    required
+                                    aria-describedby="email-description"
+                                />
+                                <input type="hidden" name="_next" value="https://purposequest.world/thanks.html">
+                                <input type="hidden" name="_subject" value="Whoo-hoo!  You've got a new email subscription!">
+                                <input type="hidden" name="_captcha" value="false">
+                            </div>
+                            <button type="submit" class="subscribe-button">
+                                Subscribe Free
+                            </button>
+                        </form>
+                        <p class="disclaimer-text" id="email-description">
+                            No spam—just updates you’ll love. Opt out whenever you wish.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    </main>
+</body>
+</html>
+
+
+
+
+
+    <script type="text/javascript">
+
+        document.querySelector('.close-popup').addEventListener('click', function() {
+        document.querySelector('.content-overlay').style.display = 'none';
+        });
+
+        function adjustContentMargin() {
+        const header = document.querySelector('.header-section');
+        const content = document.querySelector('.content-container');
+        if (header && content) {
+            const headerHeight = header.offsetHeight;
+            content.style.marginTop = (headerHeight + 16) + 'px'; // 16px = 1rem
+  }
+}
+window.addEventListener('load', adjustContentMargin);
+window.addEventListener('resize', adjustContentMargin);
+
+
+        // FAQ Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButtons = document.querySelectorAll('.toggle-button');
+
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+                    // Close all other FAQ items
+                    toggleButtons.forEach(otherButton => {
+                        if (otherButton !== this) {
+                            otherButton.setAttribute('aria-expanded', 'false');
+                            otherButton.closest('.faq-item').setAttribute('aria-expanded', 'false');
+                        }
+                    });
+
+                    // Toggle current FAQ item
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    faqItem.setAttribute('aria-expanded', !isExpanded);
+                });
+
+                // Keyboard support
+                button.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+        
+   

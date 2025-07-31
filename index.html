@@ -749,12 +749,56 @@
 
 </footer>
 
+<!-- Popup Code -->
+<div id="popup" class="popup no-shadow">
+  <div class="popup-content no-shadow">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <iframe 
+    src="newsletter-subscription-popup.html" 
+    width="950px" 
+    height="600px"
+    scrolling="no"
+    frameborder="0"
+    ></iframe>
+  </div>
+</div>
   
 
 <!-- Scripts -->
 
 
     <script type="text/javascript">
+
+        window.onload = function() {
+            if (window.innerWidth > 880) {
+                 setTimeout(openPopup, 5000);
+             }
+        };
+
+
+        // Popup Functionality
+        function openPopup() {
+        document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        }
+
+        // Show popup after 5 seconds
+        // window.onload = function() {
+        // setTimeout(openPopup, 5000);
+        // };
+
+        function closePopup() {     
+             var popup = document.getElementById("popup");
+                if (popup && popup.parentNode) {
+                    popup.parentNode.removeChild(popup);
+                }
+        }
+
+
+
 
 
         // FAQ Toggle Functionality
