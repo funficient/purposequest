@@ -349,6 +349,10 @@ nav a.active {
   background: url("../images/sunset.jpg") center center no-repeat;
   background-size: cover;
 }
+.hero-section.hero-goddess {
+  background: url("../images/view-cosmos-season.jpg") center center no-repeat;
+  background-size: cover;
+}
 
 @media (max-width: 991px) {
     .hero-section {
@@ -3201,4 +3205,8 @@ border: none;
 .white {
     background-color: #fff;
     color: #424242;
+}
+
+.dark-text {
+    color: #00381F;
 }
