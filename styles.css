@@ -829,13 +829,16 @@ nav a.active {
     color: rgba(255, 255, 255, 1);
 }
 
+/* .card-image {
+  flex: 0 0 38%;
+} */
 
 
 .retreat-hero-image {
     z-index: 0;
     display: flex;
-    min-height: 256px;
-    width: 100%;
+    min-height: 100%;
+    width: auto;
     max-width: 422px;
 }
 
@@ -910,6 +913,7 @@ nav a.active {
 
 .card-content {
     /* height: 188px; */
+    flex: 1;
     width: 100%;
     padding: 1.2rem;
 }
@@ -3209,4 +3213,246 @@ border: none;
 
 .dark-text {
     color: #00381F;
+}
+
+/* Grid cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  min-height: 400px;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  color: white;
+  /* aspect-ratio: 3 / 4; */
+  
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.one {
+      background-image: url('images/retreat-solo-ryan-moreno-unsplash.jpg'); 
+}
+
+.two {
+      background-image: url('images/retreat-wyosmax-saeling-unsplash.jpg'); 
+}
+
+.three {
+        background-image: url('images/retreat-divine-goddess-vladimir-yelizarov-unsplash.jpg'); 
+}
+
+.four {
+    background-image: url('images/retreat-writers-pj-gal-szabo-unsplash.jpg');
+}
+
+.five {
+    background-image: url('images/retreat-innovation-elias-maurer-unsplash.jpg');
+
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+/* .card-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+} */
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.tag {
+  background: #48745777;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem ;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+
+}
+
+.card-title {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-align: left;
+  margin: 5rem 0 2rem 0;
+  width: 100%;
+  /* color: #d99201; */
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.learn-more {
+  color: #fff;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.learn-more:hover {
+  color: #487457;
+  text-decoration: none;
+}
+
+.cta {
+  background: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  color: #487457;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta:hover {
+  background: #3a6b4c;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.card-title,
+.description,
+.learn-more
+ {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.blurred-text-box {
+  /* background: rgba(255, 255, 255, 0.2);  */
+  backdrop-filter: blur(15px);        
+  -webkit-backdrop-filter: blur(15px); 
+  /* padding: 1rem 2rem; */
+  border-radius: 10px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Special layout for exactly 4 cards */
+.card-grid:has(.card:nth-child(4)):not(:has(.card:nth-child(5))) {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-grid:has(.card:nth-child(4)):not(:has(.card:nth-child(5))) .card:nth-child(1) {
+  grid-column: span 2;
+}
+
+.card-grid:has(.card:nth-child(4)):not(:has(.card:nth-child(5))) .card:nth-child(4) {
+  grid-column: span 2;
+}
+
+.card-grid:has(.card:nth-child(5)) .card:nth-child(1) {
+  grid-column: span 2;
+}
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 1rem;
+  }
+
+  .card {
+    min-height: 300px;
+    
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+    margin: 3rem 0 1.5rem 0;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 660px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .card {
+    min-height: 250px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .tags {
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.card,
+.card-grid {
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    grid-column: auto !important;
+  }
 }
