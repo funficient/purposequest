@@ -2438,6 +2438,18 @@ section {
     margin: auto 0;
 }
 
+.social-icons a {
+  margin-top: 0.5rem;
+  color: #fff;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #d99201;
+}
+
+
 .social-link {
     display: flex;
     align-items: center;
