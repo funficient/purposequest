@@ -3380,6 +3380,8 @@ border: none;
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
   }
 }
 
@@ -3405,6 +3407,8 @@ border: none;
   .card-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     padding: 1rem;
+    gap: 1rem;
+  
   }
 
   .card {
@@ -3414,12 +3418,13 @@ border: none;
 
   .card-title {
     font-size: 1.3rem;
-    margin: 3rem 0 1.5rem 0;
+    margin: 4rem 0 1.2rem 0;
   }
 
   .description {
     font-size: 0.95rem;
   }
+  
 }
 
 /* Mobile phones */
@@ -3449,8 +3454,7 @@ border: none;
     flex-wrap: wrap;
     justify-content: center;
     top: 0.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+   
   }
 }
 
@@ -3466,5 +3470,9 @@ border: none;
 
   .card {
     grid-column: auto !important;
+  }
+
+  .tag {
+    font-size: 0.7rem;
   }
 }
