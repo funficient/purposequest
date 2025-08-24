@@ -307,7 +307,7 @@ nav a.active {
   }
 
   .hero-header {
-    margin-top: 10rem; /* Example for taller mobile header */
+    margin-top: 10rem; 
   }
 
 }
@@ -351,6 +351,10 @@ nav a.active {
 }
 .hero-section.hero-goddess {
   background: url("../images/view-cosmos-season.jpg") center center no-repeat;
+  background-size: cover;
+}
+.hero-section.hero-dyf {
+  background: url("../images/retreat-art-lake.jpg") bottom center no-repeat;
   background-size: cover;
 }
 .hero-section.hero-about {
