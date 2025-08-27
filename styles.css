@@ -5,7 +5,8 @@
  :root {
   --primary-color: #00381F;
   --accent-color: #0B5844;
-  --accent-golden: #d99201;
+  --accent-golden: rgb(235, 193, 5);
+  --accent-golden-hover: rgb(218, 167, 0);
   --antbear-green: #487457;
   --text-color: #5d5d5d;
   --white: #fff;
@@ -203,6 +204,8 @@ h3 {
 .hero-section {
     padding-top: 0;
     margin-top: 0;
+    max-height: 100vh;
+    width: 100vw;
 }
 
 /* Sticky Header */
@@ -222,7 +225,8 @@ h3 {
 }
 
 .logo img {
-  height: 3rem;
+  height: 2em;
+  flex: none;
 }
 
 .nav-container {
@@ -359,6 +363,12 @@ nav a.active {
 }
 .hero-section.hero-about {
   background: url("../images/nottingham-road.jpg") center center no-repeat;
+  background-size: cover;
+  
+}
+}
+.hero-section.hero-coach {
+  background: url("../images/view-autumn-afternoon-light.jpg") center center no-repeat;
   background-size: cover;
   
 }
@@ -580,69 +590,37 @@ nav a.active {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    border: 1px solid #deede8;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    border: 2px solid #deede8;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
     position: relative;
     background-color: var(--accent-golden);
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+    transition: all 0.2s ease-in-out transform 0.1s ease;
 }
 
 .secondary-cta:hover {
-    background-color: #487457;
+    background-color:var(--accent-golden-hover);
     border-color: #fff;
     color: #fff;
     transition: all 0.3s ease-in-out;
 }
 
-.secondary-cta:focus {
-    outline: 2px solid #487457;
-    outline-offset: 2px;
-}
-
 @media (max-width: 640px) {
     .secondary-cta {
         width: 100%;
-        height: 44px;
     }
 }
 
 .secondary-cta .cta-text {
     color: #fff;
-    padding-right: 1rem;
+    font-size: 1.1rem;
+    padding-right: 0.5rem;
     position: relative;
-    text-transform: capitalize;
 }
 
-.secondary-cta .cta-text:hover {
-    color: #fff;
-    transition: all 0.3s ease-in-out;
-}
 
 /* Accessibility improvements */
-@media (prefers-reduced-motion: reduce) {
-    .primary-cta,
-    .secondary-cta {
-        transition: none;
-    }
-
-    .primary-cta:hover,
-    .secondary-cta:hover {
-        transform: none;
-    }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    .primary-cta {
-        border: 2px solid #fff;
-    }
-
-    .secondary-cta {
-        border: 2px solid #09090b;
-    }
-}
 
 /* Focus visible for better keyboard navigation */
 .primary-cta:focus-visible,
@@ -2606,13 +2584,14 @@ section {
 .cta-ticket-button {
   position: relative;
   text-align: center;
-  background: #d99201;
+  background: var(--accent-golden);
+  box-shadow: 0 5px 12px 8px rgba(72, 116, 87, 0.2);
   color: #fff;
   font-size: 1.1rem;
   text-transform: uppercase;
   border: 0;
-  padding: 1.5rem 2.5rem;
-  transition: background 0.3s ease, color 0.3s ease;
+  padding: 1.2rem 2.3rem;
+  transition: all 0.3s ease-in-out, color 0.3s ease;
   display: inline-block;
   overflow: visible;
   cursor: pointer;
@@ -2620,9 +2599,7 @@ section {
   border-radius: 5px;
 }
 
-.accent-color {
-    background-color: #d99201;
-}
+/* 
 
 .cta-ticket-button::before,
 .cta-ticket-button::after {
@@ -2636,7 +2613,7 @@ section {
   z-index: 2;
   /* box-shadow: 0 5px 16px 8px rgba(72, 116, 87, 0.8);  */
   
-}
+/* }
 .white-ticket-bg::before,
 .white-ticket-bg::after {
   content: "";
@@ -2649,9 +2626,9 @@ section {
   z-index: 2;
   box-shadow: none; 
   
-}
+} */
 
-.cta-ticket-button::before {
+/* .cta-ticket-button::before {
    left: -10.5px;
    border-radius: 0 10px 10px 0;
    clip-path: inset(0 0 0 50%);
@@ -2662,7 +2639,7 @@ section {
   right: -10.5px;
   border-radius: 10px 0 0 10px;
   clip-path: inset(0 50% 0 0);
-}
+} */ 
 
 .cta-ticket-button:hover {
   background: #3a6b4c; 
@@ -3507,3 +3484,77 @@ border: none;
     font-size: 0.7rem;
   }
 }
+
+/* As featured logo's */
+
+
+    .as-featured {
+      --logo-height: 2rem;      
+      --gap: 1rem;
+      --muted: 0.85;
+        padding: 1.25rem 0 2rem 0;
+        border-bottom: 1px solid #eee;
+        width: 70%;
+        margin: auto;
+    }
+
+    .as-featured__title {
+      margin: 1rem;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color:#09090b;
+    }
+
+    .as-featured__logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .as-featured__logos li {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .as-featured__logos a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.4rem;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .as-featured__logos img {
+      display: block;
+      height: var(--logo-height);
+      width: auto;
+      margin: auto;
+      max-width: 160px;          
+      object-fit: contain;
+      filter: grayscale(100%) opacity(var(--muted));
+      transition: filter 200ms ease, opacity 200ms ease, transform 200ms ease;
+    }
+
+    .as-featured__logos a:hover img,
+    .as-featured__logos a:focus-visible img {
+      filter: none;
+      opacity: 1;
+      
+    }
+
+    /* Optional: subtle divider if you want it */
+    .as-featured--with-border {
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .as-featured__title { color: #bbb; }
+      .as-featured--with-border { border-color: #2a2a2a; }
+    }
