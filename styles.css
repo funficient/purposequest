@@ -2579,6 +2579,7 @@ section {
   display: inline-block;
   overflow: visible;
   cursor: pointer;
+  
 }
 
 .cta-ticket-button {
@@ -2599,47 +2600,7 @@ section {
   border-radius: 5px;
 }
 
-/* 
 
-.cta-ticket-button::before,
-.cta-ticket-button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background: #e9e9e9;
-  z-index: 2;
-  /* box-shadow: 0 5px 16px 8px rgba(72, 116, 87, 0.8);  */
-  
-/* }
-.white-ticket-bg::before,
-.white-ticket-bg::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  z-index: 2;
-  box-shadow: none; 
-  
-} */
-
-/* .cta-ticket-button::before {
-   left: -10.5px;
-   border-radius: 0 10px 10px 0;
-   clip-path: inset(0 0 0 50%);
-   
-}
-
-.cta-ticket-button::after {
-  right: -10.5px;
-  border-radius: 10px 0 0 10px;
-  clip-path: inset(0 50% 0 0);
-} */ 
 
 .cta-ticket-button:hover {
   background: #3a6b4c; 
@@ -2657,8 +2618,8 @@ section {
   display: inline-block;
   position: relative;
   padding: 1rem 2rem;
-  /* background: var(--antbear-green, #487457); */
-  background-color: #d99201;
+
+  background-color: var(--accent-golden);
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
@@ -2671,8 +2632,9 @@ section {
   transition: background 0.3s ease, color 0.3s ease, 
 }
 
-button i.fa-ticket {
-  margin-left: 10px;
+button i.fa-ticket, .fa-ticket {
+  margin-left: 12px;
+  
   color: #fff; 
   font-size: 1.1em;
   vertical-align: middle;
