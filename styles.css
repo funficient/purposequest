@@ -2586,7 +2586,7 @@ section {
   position: relative;
   text-align: center;
   background: var(--accent-golden);
-  box-shadow: 0 5px 12px 8px rgba(72, 116, 87, 0.2);
+  box-shadow: 0 5px 12px 8px rgba(72, 116, 87, 0.1);
   color: #fff;
   font-size: 1.1rem;
   text-transform: uppercase;
@@ -2936,14 +2936,6 @@ display: none;
 
 }
 
-.subscribe-button:focus {
-    
-    
-}
-
-.subscribe-button:active {
-    transform: translateY(0);
-}
 
 @media (max-width: 991px) {
     .subscribe-button {
@@ -3087,7 +3079,7 @@ border: none;
 
 .footer .subscribe-button {
       margin-top: 8px;
-      background-color: #d99201;
+      background-color:var(--accent-golden);
 }
 
 .footer .subscribe-button:hover {
