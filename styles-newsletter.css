@@ -1,0 +1,156 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+  :root {
+  --wall-yellow: #e1c653;
+  --dark-avo-green: #4a5b25;
+
+  --antbear-green: #487457;
+
+  --primary-color: #00381F;
+  
+
+  --sunshine-yellow: #e2c858;
+  --happy-yellow: #f8d00e;
+  --dark-happy-yellow: #f9ba15;
+  --soft-yellow-dark: #ecce67;
+  --soft-yellow-light: #f8e7ab;
+  
+  --wall-green-dark: #8e8536;
+  --wall-green-light: #e8e3c6;
+
+  --avo-green: #758d39;
+  
+  --moss-green: #758070;
+
+  --pastel-green: #cdc676;
+  --pastel-pink: #dfb59d;
+  --pastel-grey: #ccc6b6;
+
+}
+
+@font-face {
+    font-family: 'Motterdam';
+    src: url('css/Motterdam-K74zp.ttf') format('truetype'),
+         url('css/Motterdam-MVanr.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* .hero-background-newsletter {
+  background: url("../images/nottingham-road.jpg")  center center  no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+} */
+
+
+/* Content overlay with shadow */
+.content-overlay {
+    /* border-radius: 10px; */
+
+    background-color: rgba(255, 255, 255, 0.002);
+    box-shadow: 0px 0px 40px rgba(33, 33, 33, 0.1);
+    align-self: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    padding: 5rem;
+    margin: auto;
+}
+
+
+.content-container {
+    gap: 1rem;
+    display: flex;
+    background-color: #fff;
+    border-radius: 0.7rem;
+    margin: auto;
+    /* width: 100%;
+    height: 100%; */
+    margin: 5rem;
+}
+
+@media (max-width: 880px) {
+    .content-container {
+      margin-top: 100px;
+      
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        z-index: -2;
+    }
+}
+
+/* Image column */
+.image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    line-height: normal;
+    width: 50%;
+    margin-left: 0;
+}
+
+@media (max-width: 991px) {
+    .image-column {
+        width: 100%;
+    }
+}
+
+.portrait-image {
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+@media (max-width: 991px) {
+    .portrait-image {
+        max-width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+.form-column {
+    justify-self: center;
+    align-items: center;
+    margin: auto;
+}
+
+
+/* Main heading */
+.newsletter-heading {
+    
+    min-height: 115px;
+    color: #000;
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+@media (max-width: 991px) {
+    .newsletter-heading {
+        margin-top: 40px;
+        font-size: 32px;
+        line-height: 40px;
+        max-width: 100%;
+    }
+}
+
+
+
+/* Subtitle text */
+.subtitle-text {
+    color: rgba(46, 50, 61, 1);
+    font-size: 16px;
+    font-weight: 400;
+    align-self: start;
+    margin-top: 29px;
+}
+

@@ -1,0 +1,568 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+  :root {
+  --wall-yellow: #e1c653;
+  --dark-avo-green: #4a5b25;
+
+  --antbear-green: #487457;
+
+  --primary-color: #00381F;
+  
+
+  --sunshine-yellow: #e2c858;
+  --happy-yellow: #f8d00e;
+  --dark-happy-yellow: #f9ba15;
+  --soft-yellow-dark: #ecce67;
+  --soft-yellow-light: #f8e7ab;
+  
+  --wall-green-dark: #8e8536;
+  --wall-green-light: #e8e3c6;
+
+  --avo-green: #758d39;
+  
+  --moss-green: #758070;
+
+  --pastel-green: #cdc676;
+  --pastel-pink: #dfb59d;
+  --pastel-grey: #ccc6b6;
+
+}
+
+@font-face {
+    font-family: 'Motterdam';
+    src: url('css/Motterdam-K74zp.ttf') format('truetype'),
+         url('css/Motterdam-MVanr.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hero-background-index {
+  background: url("../images/drakensberg-pause-for-a-few-minutes-in-nature.jpg")  center center  no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.dark {
+  color: var(--dark-avo-green);
+  text-decoration: underline;
+  font-weight: 600;
+
+}
+/* As featured logo's */
+
+.as-featured {
+  --logo-height: 2rem;      
+  --gap: 1rem;
+  --muted: 0.8;
+  padding: 1.25rem 0 2rem 0;
+  border-bottom: 1px solid #eee;
+  width: 70%;
+  margin: auto;
+}
+
+.as-featured__title {
+  margin: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color:#000;
+}
+
+.as-featured__logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+ }
+
+.as-featured__logos li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.as-featured__logos a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.4rem;
+  text-decoration: none;
+}
+
+.as-featured__logos img {
+  display: block;
+  height: var(--logo-height);
+  width: auto;
+  margin: auto;
+  max-width: 160px;          
+  object-fit: contain;
+  filter: grayscale(100%) opacity(var(--muted));
+  transition: filter 200ms ease, opacity 200ms ease, transform 200ms ease;
+}
+
+.as-featured__logos a:hover img,
+.as-featured__logos a:focus-visible img {
+  filter: none;
+  opacity: 1;  
+  }
+
+
+@media (prefers-color-scheme: dark) {
+  .as-featured__title { color: #bbb; }
+  .as-featured--with-border { border-color: #2a2a2a; } 
+
+}
+
+/* Retreats summary cards */
+
+.retreats-section {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 5rem;
+}
+
+@media (max-width: 991px) {
+    .retreats-section {
+        padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 4rem;
+      margin-top: 2rem;
+    }
+
+    .description-text {
+      width: 100vw;
+      padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .retreats-section {
+        padding: 40px 20px;
+    }
+
+    .section-description {
+        width: 100%;
+    }
+}
+
+/* Grid cards */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  max-width: 1200px;
+  margin: auto;
+  
+  transition: all 0.3s ease-in-out;
+}
+
+.card-grid:has(.card:nth-child(4)):not(:has(.card:nth-child(5))) {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-grid:has(.card:nth-child(4)):not(:has(.card:nth-child(5))) .card:nth-child(1) {
+  grid-column: span 2;
+}
+
+.card-grid:has(.card:nth-child(4)):not(:has(.card:nth-child(5))) .card:nth-child(4) {
+  grid-column: span 2;
+}
+
+.card-grid:has(.card:nth-child(5)) .card:nth-child(1) {
+  grid-column: span 2;
+}
+
+@media (max-width: 991px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 1rem;
+  }
+}    
+
+/* Cards */
+
+  .card {
+  position: relative;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  color: white;
+  /* aspect-ratio: 3 / 4; */
+  min-height: 400px;
+  max-height: 600px;
+  margin: 0 auto;
+  box-shadow: 0 5px 10px 8px rgba(72, 116, 87, 0.1);;
+  transition: all 0.3s ease-in-out;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+
+.learn-more {
+  color: var(--wall-yellow);
+  text-decoration: underline;
+  text-align: center;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 1rem;
+}
+
+.learn-more:hover {
+  color: #fff;
+}
+
+
+.card {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  break-inside: avoid;
+  min-height: 400px;
+  display: flex;
+  align-items: stretch;
+  color: white;
+}
+
+.card-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+
+.card-top {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 3;
+}
+
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  background-color: var(--dark-avo-green) ;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: #000;
+}
+
+.cta {
+  background-color: var(--wall-yellow);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-shadow: #00381F;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color:var(--wall-green-dark);
+}
+
+
+.card-hover {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+  padding: 2rem;
+}
+
+.card:hover .card-hover {
+  opacity: 1;
+}
+
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.card-bottom {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.card-title {
+  text-transform: uppercase;
+  background: #fff;
+  color: var(--dark-avo-green);
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-weight:600;
+  line-height: 1.5rem;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+  width: 100%;
+  /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); */
+}
+
+
+@media (max-width: 768px) {
+
+  .card {
+    min-height: 250px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-column: auto !important;
+  }
+
+  .card-bottom {
+    bottom: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .tags {
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+  }
+}
+
+/* Retreat Details */
+
+
+/* Retreat details section */
+.retreat-details-container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 2rem;
+  width: 80vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  align-items: center;
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .retreat-details-container {
+    grid-template-columns: 3fr;
+    gap: 1rem;
+    width: 100vw;
+
+  }
+
+}
+
+.accordion-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.accordion nav {
+  align-items: left;
+  text-align: left;
+}
+
+.accordion-title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.accordion-item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  list-style: none;
+}
+
+.accordion-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-content {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.arrow {
+  font-size: 1rem;
+  color:#444;
+  transition: transform 0.3s ease;
+}
+
+details[open] .arrow {
+  transform: rotate(180deg);
+}
+
+.signup-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #008080;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-auto-rows: 350px;
+  gap: 1rem;
+  overflow: hidden;
+  background-position: center center;
+  border-radius: 0.3rem;
+}
+
+
+.image-grid img {
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.img-1 {
+  grid-column: 1 / 3;
+  height: 100%;
+  object-fit: cover;
+   overflow: hidden;
+  background-position: center center;
+}
+
+.img-2 {
+  grid-column: 3 / -1;
+  height: 100%;
+  object-fit: cover;
+   overflow: hidden;
+  background-position: center center;
+}
+
+.img-3 {
+  grid-column: 1 / 2;
+  height: 100%;
+  object-fit: cover;
+   overflow: hidden;
+  background-position: center center;
+}
+.img-4 {
+  grid-column: 2 / -1;
+  height: 100%;
+  object-fit: cover;
+   overflow: hidden;
+  background-position: center center;
+}

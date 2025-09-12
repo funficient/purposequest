@@ -1,0 +1,457 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+  :root {
+  --wall-yellow: #e1c653;
+  --dark-avo-green: #4a5b25;
+
+  --antbear-green: #487457;
+
+  --primary-color: #00381F;
+  
+
+  --sunshine-yellow: #e2c858;
+  --happy-yellow: #f8d00e;
+  --dark-happy-yellow: #f9ba15;
+  --soft-yellow-dark: #ecce67;
+  --soft-yellow-light: #f8e7ab;
+  
+  --wall-green-dark: #8e8536;
+  --wall-green-light: #e8e3c6;
+
+  --avo-green: #758d39;
+  
+  --moss-green: #758070;
+
+  --pastel-green: #cdc676;
+  --pastel-pink: #dfb59d;
+  --pastel-grey: #ccc6b6;
+
+}
+
+@font-face {
+    font-family: 'Motterdam';
+    src: url('css/Motterdam-K74zp.ttf') format('truetype'),
+         url('css/Motterdam-MVanr.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hero-background-coach {
+  background: url("../images/view-autumn-afternoon-light.jpg")  center center  no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+
+
+.retreats-grid {
+    display: flex;
+    margin-top: 48px;
+    width: 100%;
+    align-items: stretch;
+    gap: 2rem;
+    font-weight: 400;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+    .retreats-grid {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+}
+
+/* Retreat Cards */
+.retreat-card {
+  display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    min-width: 280px;
+    overflow: hidden;
+    flex: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    padding: 1px;
+    border: 1px solid rgba(222, 237, 232, 1);
+    
+}
+
+
+.card-image-container {
+  height: 20rem;
+    position: relative;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* .card-image {
+  flex: 0 0 38%;
+} */
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  flex: 1 1 60%; 
+  
+  z-index: -1;
+}
+
+
+
+
+.retreat-hero-image {
+    z-index: 0;
+    display: flex;
+    min-height: 100%;
+    width: auto;
+    max-width: 422px;
+}
+
+.retreat-main-image {
+    aspect-ratio: 1.65;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 20rem;
+    z-index: 0;
+    
+}
+
+.top-aligned {
+    object-position: top;
+}
+
+.image-overlay {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    /* max-width: 422px; */
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 1rem;
+}
+
+
+.overlay-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    /* gap: 40px 100px; */
+    justify-content: space-between;
+}
+
+.date-info {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    line-height: 1;
+    justify-content: start;
+    margin: auto 0;
+}
+
+.calendar-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 16px;
+    align-self: stretch;
+    flex-shrink: 0;
+    margin: auto 0;
+}
+
+.retreat-date {
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.retreat-type-badge {
+    border-radius: 5px;
+    background-color: rgba(72, 116, 87, 0.8);
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: 12px;
+    line-height: 1.1;
+    justify-content: center;
+    margin: auto 0;
+    padding: 5px 12px;
+}
+
+
+.card-content {
+  display: block;
+    position: relative;
+    flex: 1 1 40%;
+    width: 100%;
+    height: 100%;
+    padding: 1.2rem;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    color: white;
+    backdrop-filter: blur(10px);        
+    -webkit-backdrop-filter: blur(10px); 
+}
+
+
+.card-image,
+.card-content {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+@media (max-width: 991px) {
+    .card-image-container, .retreat-card, .retreat-hero-image, .retreat-main-image, .image-overlay, .card-content {
+        max-width: 100%;
+    }
+
+}
+
+.location-info {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: rgba(113, 113, 122, 1);
+    line-height: 1;
+    justify-content: start;
+}
+
+.location-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 14px;
+    align-self: stretch;
+    flex-shrink: 0;
+    margin: auto 0;
+}
+
+.location-text {
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.retreat-title {
+    margin: 8px 0;
+    width: 100%;
+    font-size: 20px;
+    color: rgba(9, 9, 11, 1);
+    line-height: 1.4;
+    font-weight: 400;
+    text-align: left;
+}
+
+.retreat-description {
+    margin: 8px 0;
+    width: 100%;
+    font-size: 14px;
+    color: rgba(113, 113, 122, 1);
+    line-height: 20px;
+}
+
+.pricing-info {
+    display: flex;
+    margin-top: 8px;
+    width: 100%;
+    padding: 14px 0;
+    align-items: center;
+    gap: 16px 16px;
+    justify-content: space-between;
+}
+
+.price-container {
+    align-self: stretch;
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    width: 150px;
+    margin: auto 0;
+    padding: 5px 0;
+}
+
+.price-amount {
+    color: #487457;
+    font-size: 18px;
+    line-height: 2;
+    flex-grow: 1;
+}
+
+.price-unit {
+    color: rgba(113, 113, 122, 1);
+    font-size: 14px;
+    line-height: 1;
+}
+
+.custom-price {
+    color: rgba(16, 183, 127, 1);
+    font-size: 18px;
+    line-height: 2;
+} 
+
+.capacity-info {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: rgba(113, 113, 122, 1);
+    justify-content: start;
+    margin: auto 0;
+}
+
+.person-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 16px;
+    align-self: stretch;
+    flex-shrink: 0;
+    margin: auto 0;
+}
+
+.capacity-text {
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.card-actions {
+    width: 100%;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 1;
+    padding: 20px 20px;
+    margin-top: auto;
+}
+
+@media (max-width: 991px) {
+    .card-actions {
+        max-width: 100%;
+    }
+}
+
+.card-button {
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    min-height: 32px;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    padding: 0 10px;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+}
+
+.action-button--primary {
+    background-color: var(--antbear-green);
+}
+
+.action-button:hover {
+    opacity: 0.9;
+}
+
+.action-button:focus {
+    outline: 2px solid rgba(255, 255, 255, 1);
+    outline-offset: 2px;
+}
+
+.button-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 16px;
+    align-self: stretch;
+    flex-shrink: 0;
+    margin: auto 0;
+}
+
+.view-all-container {
+    display: flex;
+    margin-top: 48px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(9, 9, 11, 1);
+    text-align: center;
+    justify-content: start;
+}
+
+@media (max-width: 991px) {
+    .view-all-container {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}
+
+
+.cta-ticket-button {
+  position: relative;
+  text-align: center;
+  background: var(--wall-yellow);
+  box-shadow: 0 5px 12px 8px rgba(72, 116, 87, 0.1);
+  color: white;
+  text-shadow: #00381F;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: 0;
+  padding: 1.2rem 2.3rem;
+  transition: all 0.3s ease-in-out, color 0.3s ease;
+  display: inline-block;
+  overflow: visible;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+.cta-ticket-button:hover {
+  background: var(--dark-avo-green); 
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+
+}
+
+
+.card-actions.cta-ticket-button {
+  margin:0;
+  width: 100%;
+}
+
+button i.fa-ticket, .fa-ticket {
+  margin-left: 12px;
+  
+  
+  color: #fff; 
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: auto;
+}
