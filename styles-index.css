@@ -28,6 +28,9 @@
   --pastel-pink: #dfb59d;
   --pastel-grey: #ccc6b6;
 
+  --transition: 420ms ease;
+
+
 }
 
 @font-face {
@@ -366,6 +369,9 @@
 .card-bottom {
   position: absolute;
   bottom: 1rem;
+  width: 100%;
+  min-height: 3rem; 
+  opacity: 0.8;
 }
 
 .card-title {
@@ -566,3 +572,113 @@ details[open] .arrow {
    overflow: hidden;
   background-position: center center;
 }
+
+/* Testimonials */
+
+.testimonial-banner {
+      width: 100%;
+      background: var(--dark-avo-green);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      padding: 4rem 0;
+      box-sizing: border-box;
+      margin-bottom: 4rem;
+    }
+
+
+    .testimonial-inner {
+      width: 100%;
+      max-width: 80%;
+      padding: 0 20px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .slides {
+      position: relative;
+      min-height: 3.5rem;
+    }
+
+    .testimonial {
+      position: absolute;
+      inset: 0 0 auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 12px;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity var(--transition), transform var(--transition);
+      will-change: opacity, transform;
+      pointer-events: none;
+    }
+
+    .testimonial.active {
+      opacity: 1;
+      transform: translateY(0);
+      position: relative;
+      pointer-events: auto;
+    }
+
+    .testimonial p {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #fff;
+      font-weight: 400;
+    }
+
+    .white-transparent-text {
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 300;
+    }
+
+    /* Dots navigation */
+    .dots {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 12px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--dot-color);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: transform 180ms ease, background 180ms ease;
+    }
+
+    .dot[aria-pressed="true"] {
+      background: var(--dot-active);
+      transform: scale(1.25);
+    }
+
+    .dot:focus {
+      outline: 2px solid rgba(255,255,255,0.14);
+      outline-offset: 4px;
+    }
+
+    /* Responsive text sizing */
+    @media (min-width: 640px) {
+      .testimonial p {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .testimonial p {
+        font-size: 1.35rem;
+      }

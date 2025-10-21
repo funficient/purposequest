@@ -175,10 +175,10 @@ h3 {
   /* background: var(--dark-avo-green);; */
   background: linear-gradient(
     145deg,
-    var(--avo-green) -30%,
-    var(--dark-avo-green) 120%
+    var(--dark-happy-yellow) -40%,
+    var(--happy-yellow) 120%
     );
-  box-shadow: 0 5px 12px 8px rgba(72, 116, 87, 0.1);
+  box-shadow: 0 5px 12px 8px rgba(72, 116, 87, 0.15);
   color: #fff;
   font-size: 1.1rem;
   text-transform: uppercase;
@@ -194,7 +194,7 @@ h3 {
 
 
 .cta-button:hover {
-  background: var(--wall-yellow); 
+  /* background: var(--wall-yellow);  */
   transition: all 0.3s ease-in-out;
   color: var(--dark-avo-green);
 }
@@ -461,14 +461,18 @@ nav a.active {
 
 .secondary-cta {
     display: flex;
-    padding: 0.8rem 1.5rem;
+    padding: 1.2rem 2.5rem;
     font-weight: 500;
     justify-content: center;
     align-items: center;
     border-radius: 6px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
     position: relative;
-    background-color: var(--wall-yellow);
+    background: linear-gradient(
+    145deg,
+    var(--dark-happy-yellow) -40%,
+    var(--happy-yellow) 120%
+    );
     text-shadow: #09090b;
     color: #fff;
     text-shadow: #09090b;
@@ -481,7 +485,7 @@ nav a.active {
 
 .secondary-cta:hover {
     background-color:var(--dark-avo-green);
-    color: #fff;
+    color: var(--dark-avo-green);
     transition: all 0.3s ease-in-out;
 }
 
@@ -1287,4 +1291,8 @@ display: none;
   text-align: center;
   margin:auto;
   margin-top: -1rem;
+}
+
+.white-text {
+  color: white;
 }
