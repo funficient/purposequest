@@ -650,11 +650,14 @@ nav a.active {
 
 /* Footer */
 .footer {
+  position: absolute;
+  left: 0;
     display: flex;
     width: 100vw;
     align-items: space-between;
     gap: 150px;
-    padding: 2rem 20%;
+    margin: 0;
+    /* padding: 2rem 20%; */
     background-color: var(--dark-avo-green);
     background: linear-gradient(135deg,
     var(--dark-avo-green) 0%,
@@ -1302,4 +1305,20 @@ display: none;
 
 .white-text {
   color: white;
+}
+
+.ticket-section {
+  padding-top: 3rem;
+}
+
+.section .retreats-section {
+  margin: 0;
+  padding: 0;
+}
+
+.divider-line {
+  width: 70%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 3rem auto;
 }

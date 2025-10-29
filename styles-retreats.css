@@ -280,6 +280,7 @@
   }
 }
 
+
 .ticket-section i,
 .cta-button i {
     margin-left: 8px;
@@ -922,7 +923,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   margin: auto;
   margin-top: -4rem;
   border-radius: 0;
@@ -1789,3 +1790,178 @@ section {
 .rs-image-small-second {
   aspect-ratio: 1.14;
 } */
+
+
+.gallery-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gallery-grid {
+  display: flex;
+  aspect-ratio: 1.618 / 1;
+}
+
+.left-image {
+  flex: 1.618;
+  overflow: hidden;
+}
+
+.left-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.right-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-right {
+  flex: 1.618;
+  overflow: hidden;
+}
+
+.top-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bottom-right {
+  flex: 1;
+  display: flex;
+}
+
+.bottom-left,
+.bottom-right-inner {
+  flex: 1;
+  overflow: hidden;
+}
+
+.bottom-left img,
+.bottom-right-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gallery-grid {
+  display: flex;
+  aspect-ratio: 1.618 / 1;
+  gap: 1rem;
+}
+
+.left-image {
+  flex: 1.618;
+  overflow: hidden;
+}
+
+.left-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.right-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.top-right {
+  flex: 1.618;
+  overflow: hidden;
+}
+
+.top-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bottom-right {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+}
+
+.bottom-left,
+.bottom-right-inner {
+  flex: 1;
+  overflow: hidden;
+}
+
+.bottom-left img,
+.bottom-right-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Base (desktop) — keep what you already have */
+
+/* Mobile breakpoint: stack columns and tune spacing */
+@media (max-width: 800px) {
+  .gallery-grid {
+    flex-direction: column;
+    aspect-ratio: auto;     /* let height be driven by image content */
+    gap: 0.75rem;           /* slightly smaller gap on mobile */
+  }
+
+  .left-image,
+  .right-images {
+    flex: none;             /* disable gold-ratio flex sizing when stacked */
+    width: 100%;
+    height: auto;
+  }
+
+  .left-image img,
+  .top-right img,
+  .bottom-left img,
+  .bottom-right-inner img {
+    width: 100%;
+    height: auto;          /* natural height so browser chooses based on srcset */
+    object-fit: cover;     /* still crop when needed for consistent look */
+    display: block;
+  }
+
+  .right-images {
+    display: grid;
+    grid-template-rows: auto auto; /* top image then a row for the two small images */
+    gap: 0.75rem;
+  }
+
+  .bottom-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* keep the two bottom images side-by-side */
+    gap: 0.5rem;
+  }
+}
+
+/* Optional smaller breakpoint to stack those two bottom images vertically */
+@media (max-width: 420px) {
+  .bottom-right {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 0.5rem;
+  }
+}
