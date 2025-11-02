@@ -929,6 +929,13 @@ section {
   border-radius: 0;
 }
 
+@media (max-width: 881px) {
+  .center-button-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
 .cta-banner {
     padding: 2rem;
     margin: 2rem;
