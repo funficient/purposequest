@@ -118,6 +118,19 @@ h1 {
   text-shadow: #00381F;
 }
 
+.main-about-container {
+  background-color: #008080;
+    color: #fff;
+  padding: 2rem;
+  
+}
+.about-section-text h1 {
+  
+  color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
 h2 {
   font-size: 2.2rem;
   font-weight: 500;
@@ -390,6 +403,7 @@ nav a.active {
 .hero-header {
   max-width: 1000px;
   color: white;
+  margin:auto;
 }
 
 .main-heading {
@@ -415,6 +429,16 @@ nav a.active {
   margin-bottom: 2rem;
   line-height: 1.4;
 }
+
+/* .hero-background-about {
+  background: url("../images/poi-midlands-meander2")  center center  no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+} */
+
+
 
 .spacer {
   margin-bottom: 2rem;
@@ -1322,3 +1346,11 @@ display: none;
   background-color: #ccc;
   margin: 3rem auto;
 }
+
+/* About Page */
+
+.contain {
+  width: 70%;
+  margin: auto;
+}
+

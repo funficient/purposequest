@@ -49,6 +49,14 @@
   
 }
 
+.hero-background-about {
+  background: url("../images/nottingham-road.jpg")  center center  no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
 .dark {
   color: var(--dark-avo-green);
   text-decoration: underline;
